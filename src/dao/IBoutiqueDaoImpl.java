@@ -16,8 +16,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/master
 @Repository("BoutiqueDao")
 @Transactional
 
