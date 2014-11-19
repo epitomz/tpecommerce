@@ -3,11 +3,12 @@ package service;
 import java.util.List;
 
 import metier.Categorie;
+import metier.Client;
 import metier.Commande;
 import metier.Produit;
 import metier.User;
 
-import com.sun.security.ntlm.Client;
+
 
 public interface InternauteBoutiqueService {
 	
