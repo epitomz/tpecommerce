@@ -18,19 +18,19 @@ public class ProduitAction extends ActionSupport {
 	@Autowired
 	public IBoutiqueDao dao;
 	
-	public String liste() {
+	public String listeP() {
 		return SUCCESS;
 	}
 	
-	public String save() {
+	public String saveP() {
 		return SUCCESS;
 	}
 	
-	public String update() {
+	public String updateP() {
 		return SUCCESS;
 	}
 	
-	public String delete() {
+	public String deleteP() {
 		return SUCCESS;
 	}
 
