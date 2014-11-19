@@ -18,6 +18,7 @@
 	<div class="panier">
 		<h2>Panier</h2>
 		<p>0 article ajouté</p>
+		<a href="">Se connecter</a>
 	</div>
 </div>
 
