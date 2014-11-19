@@ -14,7 +14,7 @@
 			<result>index.jsp</result>
 		</action>
 		
-		<action name="liste" class="action.ProduitAction" method="listeP">
+		<action name="liste" class="action.ProduitAction" method="listeCetP">
 			<result>backProduit.jsp</result>
 		</action>
 		

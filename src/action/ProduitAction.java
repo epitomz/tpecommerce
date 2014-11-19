@@ -20,24 +20,26 @@ public class ProduitAction extends ActionSupport {
 	private List<Categorie> categories;
 	
 	@Autowired
-	public IAdminProduitService AdminProduitService;
-	@Autowired
 	public IAdminCategoriesService AdminCategoriesService;
 	
 	
+	public void setIdCat(long idCat) {
+		this.idCat = idCat;
+	}
+
 	public String listeP() {
-		produits=AdminProduitService.listproduits();
+		produits=AdminCategoriesService.listproduits();
 		return SUCCESS;
 	}
 	
 	public String listeCetP(){
-		produits=AdminProduitService.listproduits();
+		produits=AdminCategoriesService.listproduits();
 		categories=AdminCategoriesService.listCategories();
 		return SUCCESS;
 	}
 	
 	public String saveP() {
-		AdminProduitService.ajouterProduit(produit,idCat);
+		AdminCategoriesService.ajouterProduit(produit,idCat);
 		return SUCCESS;
 	}
 	
@@ -66,11 +68,11 @@ public class ProduitAction extends ActionSupport {
 	}
 
 	public IAdminProduitService getAdminProduitService() {
-		return AdminProduitService;
+		return AdminCategoriesService;
 	}
 
 	public void setAdminProduitService(IAdminProduitService adminProduitService) {
-		AdminProduitService = adminProduitService;
+		AdminCategoriesService = AdminCategoriesService;
 	}
 
 	public Long getIdCat() {

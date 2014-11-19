@@ -9,13 +9,12 @@ import metier.Panier;
 import metier.Produit;
 import metier.User;
 
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.stereotype.Component;
+
 
 import dao.IBoutiqueDao;
 
-@Repository("InternautreBoutiqueService")
-@Transactional
+@Component
 public class InternauteBoutiqueServiceImpl implements InternauteBoutiqueService {
 	
 	private IBoutiqueDao dao;

@@ -22,7 +22,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional
-
 public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	
 	@Autowired

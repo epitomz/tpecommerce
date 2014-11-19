@@ -81,6 +81,7 @@
 	<context:annotation-config />
 	<!-- package contenant les classes annotées spring -->
 	<context:component-scan base-package="dao" />
+	<context:component-scan base-package="service" />
 	<!-- prise en compte du gestionnaire de transaction pour @Transactional -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 

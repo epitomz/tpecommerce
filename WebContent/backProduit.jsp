@@ -13,8 +13,8 @@
 	
 	<div class="backform">
 		<form action="saveP" method="post">
-			<s:select label="Catégorie" list="categories" listeValue="nomCategorie"></s:select>
-			<s:select label="Categorie:" name="idCat" list="categories" listKey="idCategorie" listValue="nomCategorie"/>
+			<s:select label="Catégorie" list="categories" listeValue="nomCategorie"></s:select><br />
+			<s:select label="Categorie:" name="idCat" list="categories" listKey="idCategorie" listValue="nomCategorie"/><br />
 			<s:textfield label="Nom du produit" name="produit.designation"></s:textfield><br />
 			<s:textarea label="Description" cols="40" rows="5" name="produit.description"></s:textarea><br />
 			<s:textfield label="prix" name="produit.prix"></s:textfield><br />
