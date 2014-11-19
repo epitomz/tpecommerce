@@ -103,17 +103,17 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	
 	//ko
 	public List<Produit> produitsParMotCle(String mc){
-		return this.getSession().createQuery("FROM Produit").list();
+		//return this.getSession().createQuery("FROM Produit").list();
 	}
 	
 	//ko
 	public List<Produit> produitsParCategorie(Long idCat){
-		return this.getSession().createQuery("FROM Produit").list();
+		//return this.getSession().createQuery("FROM Produit").list();
 	}
 	
 	//ko
 	public List<Produit> produitsSelectionnes(){
-		return this.getSession().createQuery("FROM Produit").list();
+		//return this.getSession().createQuery("FROM Produit").list();
 	}
 	
 	//--
@@ -126,7 +126,7 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		this.getSession().delete(this.getProduit(idP));
 	}
 	
-	//ko
+	//--
 	public void modifierProduit(Produit p){
 		this.getSession().update(p);
 	}
