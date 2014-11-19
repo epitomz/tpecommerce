@@ -1,6 +1,7 @@
 package dao;
 
 import java.util.List;
+import java.util.Set;
 
 import metier.Categorie;
 import metier.Client;
@@ -85,7 +86,14 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	
 	//ko
 	public Long ajouterProduit(Produit p, Long idCat){
-		//this.getSession().save(c);
+		p=(Produit)getSession().save(p);
+		Categorie c=getCategorie(idCat);
+		Set<Produit> list=c.getListeProduit();
+		list.add(p);
+		c.setListeProduit(list);
+		getSession().update(c);
+		return p.getIdProduit();
+		
 	}
 	
 	//--
