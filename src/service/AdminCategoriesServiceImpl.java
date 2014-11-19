@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 import dao.IBoutiqueDao;
 
-@Component("AdminCategoriesService")
+@Component
 public class AdminCategoriesServiceImpl implements IAdminCategoriesService {
 
 	@Autowired

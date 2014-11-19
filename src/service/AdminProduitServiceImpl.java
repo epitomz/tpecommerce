@@ -16,7 +16,7 @@ import dao.IBoutiqueDao;
 
 
 
-@Component("AdmonProduitService")
+@Component
 public class AdminProduitServiceImpl implements IAdminProduitService{
 	
 	@Autowired

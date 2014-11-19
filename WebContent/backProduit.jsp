@@ -17,7 +17,7 @@
 			<s:select label="Categorie:" name="idCat" list="categories" listKey="idCategorie" listValue="nomCategorie"/>
 			<s:textfield label="Nom du produit" name="produit.designation"></s:textfield><br />
 			<s:textarea label="Description" cols="40" rows="5" name="produit.description"></s:textarea><br />
-			<s:textfield value="prix" name="produit.prix"></s:textfield><br />
+			<s:textfield label="prix" name="produit.prix"></s:textfield><br />
 			<s:checkbox label="Selectionne" name="produit.selectionne<"></s:checkbox><br />
 			<s:file name="fileToUpload" label="Sélectionner une photo" id="fileToUpload"></s:file><br />
 			<s:submit type="submit" value="Enregistrer"></s:submit><br />

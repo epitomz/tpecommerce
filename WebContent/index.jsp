@@ -11,6 +11,8 @@
 <body>
 <div class="entete">
 	<h1>Site de E-Commerce de la bombe</h1>
+	<s:url namespace="/" action="liste" var="lien1"/>
+	<s:a href="%{lien1}">Back</s:a>
 	<form>
 		<input type="text"></input>
 		<input type="submit" value="Rechercher"></input>
