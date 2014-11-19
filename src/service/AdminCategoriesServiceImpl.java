@@ -119,8 +119,8 @@ public class AdminCategoriesServiceImpl implements IAdminCategoriesService {
 	}
 
 	@Override
-	public void attribuerRole(Role r, Long userID) {
-		dao.attribuerRole(r, userID);
+	public void attribuerRole(Long roleID, Long userID) {
+		dao.attribuerRole(roleID, userID);
 
 	}
 
