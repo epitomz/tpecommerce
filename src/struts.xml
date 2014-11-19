@@ -12,7 +12,7 @@
 		<default-action-ref name="index"></default-action-ref>
 		<action name="index" class="action.HelloClass">
 
-			<result>HelloWorld.jsp</result>
+			<result>index.jsp</result>
 		</action>
 	</package>
 

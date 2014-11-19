@@ -1,0 +1,87 @@
+.entete {
+	width: 100%;
+	height: 150px;
+	border-bottom: 1px solid black;
+	background-color: grey;
+}
+
+.entete h1 {
+	float: left;
+	margin-left: 25px;
+}
+
+.entete form {
+	float: left;
+	margin-top: 100px;
+	margin-left: -450px;
+}
+
+.sidebar {
+	width: 16%;
+	height: 690px;
+	display: inline-block;
+	float: left;
+	background-color: #d4d4d4;
+}
+
+body {
+	margin: 0;
+}
+
+.panier {
+	float: right;
+	width: 150px;
+	height: 110px;
+	margin-right: 30px;
+	margin-top: 20px;
+}
+
+.contenu {
+	display: inline-block;
+	width: 80%;
+	min-height: 600px;
+	z-index: 10;
+	padding: 15px;
+	float: right;
+}
+
+.objet {
+	display: inline-block;
+	width: 270px;
+	height: 270px;
+	margin-right: -4px;
+	padding-left: 15px;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+}
+
+.objetlastL {
+	border-right: 0;
+}
+
+.objetlastC {
+	border-bottom: 0;
+}
+
+/*Back office*/
+.bodclass {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.bodclass h1 {
+	text-align: center;
+}
+
+.backform {
+	margin-bottom: 30px;
+}
+
+.bodclass th {
+	border: 1px solid grey;
+}
+
+.bodclass td{
+	border: 1px solid grey;
+}
+
