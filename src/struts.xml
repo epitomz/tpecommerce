@@ -11,10 +11,15 @@
 	<package name="default" namespace="/" extends="struts-default">
 		<default-action-ref name="index"></default-action-ref>
 		<action name="index" class="action.HelloClass">
-
 			<result>index.jsp</result>
 		</action>
+		
+		<action name="liste" class="action.ProduitAction" method="listeP">
+			<result>backProduit.jsp</result>
+		</action>
+		
 	</package>
+
 
 	
 

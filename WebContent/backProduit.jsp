@@ -13,7 +13,7 @@
 	
 	<div class="backform">
 		<form action="saveP" method="post">
-			<s:select label="Catégorie" list="categories"></s:select>
+			<s:select label="Catégorie" list="categories" listeValue="nomCategorie"></s:select>
 			<s:textfield label="Nom du produit" name="produit.designation"></s:textfield><br />
 			<s:textarea label="Description" cols="40" rows="5" name="produit.description"></s:textarea><br />
 			<s:textfield value="prix"></s:textfield><br />
