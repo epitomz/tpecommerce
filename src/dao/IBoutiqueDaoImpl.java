@@ -1,5 +1,6 @@
 package dao;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -47,7 +48,7 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		String password = user.getPassword();
 		boolean actived = user.isActived();
 		
-		User u = (User) this.getSession().createQuery("FROM User u WHERE u.userName = ? && u.password = ?").setParameter(0,userName).setParameter(1, password).uniqueResult();
+		User u = (User) this.getSession().createQuery("FROM User u WHERE u.userName = ?1 && u.password = ?2").setParameter(1,userName).setParameter(2, password).uniqueResult();
 		
 		if(u!=null && u.isActived()==true){
 			return "success";
@@ -96,24 +97,32 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		
 	}
 	
-	//--
+
 	public List<Produit> listproduits(){
-		return this.getSession().createQuery("FROM Produit").list();
+		List<Produit> list= new ArrayList<Produit>();
+				list=getSession().createQuery("FROM Produit").list();
+		return list;
 	}
 	
-	//ko
 	public List<Produit> produitsParMotCle(String mc){
-		return this.getSession().createQuery("FROM Produit").list();
+		List<Produit> list= new ArrayList<Produit>();
+		String query="FROM Produit p where p.designation like %"+mc+"%";
+		list=getSession().createQuery(query).list();
+		return list;
 	}
 	
-	//ko
+
 	public List<Produit> produitsParCategorie(Long idCat){
-		return this.getSession().createQuery("FROM Produit").list();
+		List<Produit> list= new ArrayList<Produit>();
+		list=getSession().createQuery("FROM Produit p where p.idCategorie=?1").setParameter(1, idCat).list();
+		return list;
 	}
 	
-	//ko
+
 	public List<Produit> produitsSelectionnes(){
-		return this.getSession().createQuery("FROM Produit").list();
+		List<Produit> list= new ArrayList<Produit>();
+		list=getSession().createQuery("FROM Produit p where p.selectionne=1").list();
+		return list;
 	}
 	
 	//--
