@@ -1,5 +1,9 @@
 package action;
 
+import javax.management.relation.Role;
+
+import metier.User;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 public class HelloClass extends ActionSupport {
@@ -51,5 +55,5 @@ public class HelloClass extends ActionSupport {
 		setMessage(getNom());
 		return SUCCESS;
 	}
-
+	
 }
