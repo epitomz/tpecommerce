@@ -12,7 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import dao.IBoutiqueDao;
 
 public class CategorieAction extends ActionSupport {
-
+	private long idRole;
 	private Categorie categorie;
 	private List<Categorie> categories;
 	
@@ -59,5 +59,6 @@ public class CategorieAction extends ActionSupport {
 		this.dao = dao;
 	}
 
+	public void attribuerRole()
 	
 }
