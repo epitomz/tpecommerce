@@ -2,26 +2,37 @@ package action;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import service.IAdminProduitService;
+import metier.Categorie;
 import metier.Produit;
 
-import com.opensymphony.xwork2.ActionSupport;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import dao.IBoutiqueDao;
+import service.IAdminCategoriesService;
+import service.IAdminProduitService;
+
+import com.opensymphony.xwork2.ActionSupport;
 
 public class ProduitAction extends ActionSupport {
 
 	private Produit produit;
 	private List<Produit> produits;
-	private Long idCat;
+	private long idCat;
+	private List<Categorie> categories;
 	
 	@Autowired
 	public IAdminProduitService AdminProduitService;
+	@Autowired
+	public IAdminCategoriesService AdminCategoriesService;
+	
 	
 	public String listeP() {
-
+		produits=AdminProduitService.listproduits();
+		return SUCCESS;
+	}
+	
+	public String listeCetP(){
+		produits=AdminProduitService.listproduits();
+		categories=AdminCategoriesService.listCategories();
 		return SUCCESS;
 	}
 	
@@ -60,6 +71,31 @@ public class ProduitAction extends ActionSupport {
 
 	public void setAdminProduitService(IAdminProduitService adminProduitService) {
 		AdminProduitService = adminProduitService;
+	}
+
+	public Long getIdCat() {
+		return idCat;
+	}
+
+	public void setIdCat(Long idCat) {
+		this.idCat = idCat;
+	}
+
+	public List<Categorie> getCategories() {
+		return categories;
+	}
+
+	public void setCategories(List<Categorie> categories) {
+		this.categories = categories;
+	}
+
+	public IAdminCategoriesService getAdminCategoriesService() {
+		return AdminCategoriesService;
+	}
+
+	public void setAdminCategoriesService(
+			IAdminCategoriesService adminCategoriesService) {
+		AdminCategoriesService = adminCategoriesService;
 	}
 
 	
