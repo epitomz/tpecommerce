@@ -46,11 +46,11 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		
 		String userName = user.getUserName();
 		String password = user.getPassword();
-		boolean actived = user.getActived();
+		boolean actived = user.isActived();
 		
 		User u = (User) this.getSession().createQuery("FROM User u WHERE u.userName = ? && u.password = ?").setParameter(0,userName).setParameter(1, password).uniqueResult();
 		
-		if(u!=null && u.getActived()==1){
+		if(u!=null && u.isActived()==1){
 			return "success";
 		}
 		else{
