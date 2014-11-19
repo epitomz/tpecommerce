@@ -9,7 +9,6 @@ import metier.Produit;
 import metier.Role;
 import metier.User;
 
-import com.sun.security.ntlm.Client;
 
 public interface IBoutiqueDao {
 	public String Authentifier (User user);
