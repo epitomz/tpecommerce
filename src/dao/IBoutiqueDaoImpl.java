@@ -1,6 +1,7 @@
 package dao;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -89,10 +90,8 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	public Long ajouterProduit(Produit p, Long idCat){
 		p=(Produit)getSession().save(p);
 		Categorie c=getCategorie(idCat);
-		Set<Produit> list=c.getListeProduit();
-		list.add(p);
-		c.setListeProduit(list);
-		getSession().update(c);
+		p.setCategorie(c);
+		getSession().update(p);
 		return p.getIdProduit();
 		
 	}
@@ -145,20 +144,25 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		this.getSession().save(u);
 	}
 	
-	//ko
-	public void attribuerRole(Role r,Long userID){
+	
+	public void attribuerRole(Long roleID,Long userID){
 		
 		User u= (User) this.getSession().get(User.class, userID);
-		Set<Role> liste =u.get;
-//		list.add(p);
-//		c.setListeProduit(list);
-//		getSession().update(c);
-//		return p.getIdProduit();
-	}
+		Role r= (Role) this.getSession().get(Role.class, roleID);
+		u.setRole(r);
+		getSession().update(u);
+		
+		
 	}
 	
-	//ko
+	
 	public Commande enregistrerCommande(Panier p,Client c){
+		Commande commande=new Commande();
+		commande.setClient(c);
+		commande.setDateCommande(new Date());
+		commande.setLigneCommande(p.getLigneCommande());
+		getSession().save(commande);
+		return commande;
 		
 	}
 
