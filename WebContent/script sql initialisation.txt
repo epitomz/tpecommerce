@@ -1,0 +1,11 @@
+INSERT INTO `letpfinal`.`role` (`idRole`, `roleName`) VALUES (NULL, 'adminCategorie');
+
+INSERT INTO `letpfinal`.`role` (`idRole`, `roleName`) VALUES (NULL, 'adminProduit');
+
+INSERT INTO `letpfinal`.`role` (`idRole`, `roleName`) VALUES (NULL, 'user');
+
+INSERT INTO `letpfinal`.`categorie` (`idCategorie`, `description`, `nomCategorie`) VALUES (NULL, 'Les ordinateurs de la mort qui tuent !', 'ordinateur');
+
+Rajouter à la main le l'administrateur.
+userName = bob
+password = obo
