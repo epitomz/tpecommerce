@@ -3,6 +3,7 @@ package dao;
 import java.util.List;
 
 import metier.Categorie;
+import metier.Client;
 import metier.Commande;
 import metier.Panier;
 import metier.Produit;
@@ -15,9 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import business.model.City;
 
-import com.sun.security.ntlm.Client;
 
 @Repository("BoutiqueDao")
 @Transactional

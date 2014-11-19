@@ -3,13 +3,13 @@ package dao;
 import java.util.List;
 
 import metier.Categorie;
+import metier.Client;
 import metier.Commande;
 import metier.Panier;
 import metier.Produit;
 import metier.Role;
 import metier.User;
 
-import com.sun.security.ntlm.Client;
 
 public interface IBoutiqueDao {
 	public String Authentifier (User user);
