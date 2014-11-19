@@ -59,6 +59,7 @@ public class CategorieAction extends ActionSupport {
 		this.dao = dao;
 	}
 
-	public void attribuerRole()
+	public void attribuerRole() {
 	
+}
 }
