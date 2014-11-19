@@ -84,7 +84,7 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		this.getSession().update(c);
 	}
 	
-	//ko
+	//--
 	public Long ajouterProduit(Produit p, Long idCat){
 		p=(Produit)getSession().save(p);
 		Categorie c=getCategorie(idCat);
