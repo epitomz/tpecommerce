@@ -7,20 +7,17 @@ import metier.Client;
 import metier.Commande;
 import metier.Panier;
 import metier.Produit;
-import metier.Role;
 import metier.User;
 
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import dao.IBoutiqueDao;
 
-@Repository("AdminCategoriesService")
-@Transactional
-
+@Component("AdminCategoriesService")
 public class AdminCategoriesServiceImpl implements IAdminCategoriesService {
 
-	
+	@Autowired
 	private IBoutiqueDao dao;
 	
 	public IBoutiqueDao getDao() {

@@ -2,10 +2,11 @@ package action;
 
 import java.util.List;
 
+import metier.Categorie;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
-import metier.Categorie;
-import metier.Produit;
+import service.IAdminCategoriesService;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -17,13 +18,14 @@ public class CategorieAction extends ActionSupport {
 	private List<Categorie> categories;
 	
 	@Autowired
-	public IBoutiqueDao dao;
+	public IAdminCategoriesService AdmineCategoriesService;
 	
 	public String listeC() {
 		return SUCCESS;
 	}
 	
 	public String saveC() {
+		AdmineCategoriesService.ajouterCategorie(categorie);
 		return SUCCESS;
 	}
 	
@@ -51,12 +53,23 @@ public class CategorieAction extends ActionSupport {
 		this.categories = categories;
 	}
 
-	public IBoutiqueDao getDao() {
-		return dao;
+
+
+	public long getIdRole() {
+		return idRole;
 	}
 
-	public void setDao(IBoutiqueDao dao) {
-		this.dao = dao;
+	public void setIdRole(long idRole) {
+		this.idRole = idRole;
+	}
+
+	public IAdminCategoriesService getAdmineCategoriesService() {
+		return AdmineCategoriesService;
+	}
+
+	public void setAdmineCategoriesService(
+			IAdminCategoriesService admineCategoriesService) {
+		AdmineCategoriesService = admineCategoriesService;
 	}
 
 	public void attribuerRole() {
