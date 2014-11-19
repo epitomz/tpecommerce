@@ -10,8 +10,6 @@ import service.IAdminCategoriesService;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import dao.IBoutiqueDao;
-
 public class CategorieAction extends ActionSupport {
 	private long idRole;
 	private Categorie categorie;
