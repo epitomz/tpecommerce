@@ -1,8 +1,9 @@
 package metier;
 
+import java.io.Serializable;
 import java.util.Set;
 
-public class Panier {
+public class Panier implements Serializable{
 	
 	
 	
