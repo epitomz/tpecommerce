@@ -138,7 +138,13 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	
 	//ko
 	public void attribuerRole(Role r,Long userID){
-		
+//		p=(Produit)getSession().save(p);
+//		Categorie c=getCategorie(idCat);
+//		Set<Produit> list=c.getListeProduit();
+//		list.add(p);
+//		c.setListeProduit(list);
+//		getSession().update(c);
+//		return p.getIdProduit();
 	}
 	
 	//ko
