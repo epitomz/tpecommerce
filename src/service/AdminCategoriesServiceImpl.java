@@ -3,16 +3,14 @@ package service;
 import java.util.List;
 
 import metier.Categorie;
+import metier.Client;
 import metier.Commande;
-import metier.Panier;
 import metier.Produit;
 import metier.Role;
 import metier.User;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.sun.security.ntlm.Client;
 
 import dao.IBoutiqueDao;
 

@@ -4,7 +4,6 @@ import java.util.List;
 
 import metier.Categorie;
 import metier.Commande;
-import metier.Panier;
 import metier.Produit;
 import metier.User;
 
