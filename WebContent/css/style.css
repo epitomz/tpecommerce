@@ -47,10 +47,10 @@ body {
 
 .objet {
 	display: inline-block;
-	width: 270px;
+	width: 250px;
 	height: 270px;
 	margin-right: -4px;
-	padding-left: 15px;
+	padding-left: 40px;
 	border-right: 1px solid grey;
 	border-bottom: 1px solid grey;
 }
