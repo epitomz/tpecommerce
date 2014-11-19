@@ -9,16 +9,17 @@ import metier.Panier;
 import metier.Produit;
 import metier.User;
 
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import dao.IBoutiqueDao;
 
 
-@Repository("AdminProduitService")
-@Transactional
+
+@Component("AdmonProduitService")
 public class AdminProduitServiceImpl implements IAdminProduitService{
 	
+	@Autowired
 	private IBoutiqueDao dao;
 
 	

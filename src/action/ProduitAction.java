@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import service.IAdminProduitService;
 import metier.Produit;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -14,15 +15,18 @@ public class ProduitAction extends ActionSupport {
 
 	private Produit produit;
 	private List<Produit> produits;
+	private Long idCat;
 	
 	@Autowired
-	public IBoutiqueDao dao;
+	public IAdminProduitService AdminProduitService;
 	
 	public String listeP() {
+
 		return SUCCESS;
 	}
 	
 	public String saveP() {
+		AdminProduitService.ajouterProduit(produit,idCat);
 		return SUCCESS;
 	}
 	
@@ -50,13 +54,14 @@ public class ProduitAction extends ActionSupport {
 		this.produits = produits;
 	}
 
-	public IBoutiqueDao getDao() {
-		return dao;
+	public IAdminProduitService getAdminProduitService() {
+		return AdminProduitService;
 	}
 
-	public void setDao(IBoutiqueDao dao) {
-		this.dao = dao;
+	public void setAdminProduitService(IAdminProduitService adminProduitService) {
+		AdminProduitService = adminProduitService;
 	}
+
 	
 	
 	
