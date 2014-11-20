@@ -29,7 +29,6 @@
 				<th>EDIT</th>
 			</tr>
 			<s:iterator value="catégories">
-			
 			<s:url namespace="/" action="updateC" var="lien1">
 			<s:param name="ref">
 				<s:property value = "idProduit"></s:property>

@@ -16,14 +16,15 @@ public class CategorieAction extends ActionSupport {
 	private List<Categorie> categories;
 	
 	@Autowired
-	public IAdminCategoriesService AdmineCategoriesService;
+	public IAdminCategoriesService AdminCategoriesService;
 	
 	public String listeC() {
+		categories=AdminCategoriesService.listCategories();
 		return SUCCESS;
 	}
 	
 	public String saveC() {
-		AdmineCategoriesService.ajouterCategorie(categorie);
+		AdminCategoriesService.ajouterCategorie(categorie);
 		return SUCCESS;
 	}
 	
@@ -61,13 +62,13 @@ public class CategorieAction extends ActionSupport {
 		this.idRole = idRole;
 	}
 
-	public IAdminCategoriesService getAdmineCategoriesService() {
-		return AdmineCategoriesService;
+	public IAdminCategoriesService getAdminCategoriesService() {
+		return AdminCategoriesService;
 	}
 
 	public void setAdmineCategoriesService(
-			IAdminCategoriesService admineCategoriesService) {
-		AdmineCategoriesService = admineCategoriesService;
+			IAdminCategoriesService adminCategoriesService) {
+		AdminCategoriesService = adminCategoriesService;
 	}
 
 	public void attribuerRole() {

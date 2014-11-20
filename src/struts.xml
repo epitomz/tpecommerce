@@ -22,6 +22,16 @@
 			<result>backProduit.jsp</result>
 		</action>
 		
+		<action name="saveC" class="action.Categoriection" method="saveC">
+			<result>backProduit.jsp</result>
+		</action>
+		
+		<action name="listeC" class="action.CategorieAction" method="listeC">
+			<result>backProduit.jsp</result>
+		</action>
+		
+		
+		
 	</package>
 
 
