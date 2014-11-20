@@ -144,6 +144,32 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	}
 	
 	
+	
+	
+	@Override
+	public List<User> listUsers() {
+		List<User> list= new ArrayList<User>();
+		list=getSession().createQuery("FROM Produit").list();
+		return list;
+	}
+
+	@Override
+	public User getUser(Long idUser) {
+		return (User) this.getSession().get(User.class, idUser);
+	}
+
+	@Override
+	public void supprimerUser(Long idUser) {
+		this.getSession().delete(this.getUser(idUser));
+		
+	}
+
+	@Override
+	public void modifierUser(User u) {
+		getSession().update(u);
+		
+	}
+
 	public void attribuerRole(Long roleID,Long userID){
 		
 		User u= (User) this.getSession().get(User.class, userID);

@@ -109,7 +109,31 @@ public class AdminCategoriesServiceImpl implements IAdminCategoriesService {
 		
 		
 	}
+	
+	@Override
+	public User getUser(Long idUser) {
+		return dao.getUser(idUser);
+	}
+	
+	@Override
+	public List<User> listUsers() {
+		return dao.listUsers();
+	}
 
+
+	@Override
+	public void supprimerUser(Long idUser) {
+		dao.supprimerUser(idUser);
+		
+	}
+
+	@Override
+	public void modifierUser(User u) {
+		dao.modifierUser(u);
+		
+	}
+
+	
 	@Override
 	public void ajouterUser(User u) {
 		dao.ajouterUser(u);

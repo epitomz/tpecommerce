@@ -27,6 +27,10 @@ public interface IBoutiqueDao {
 	public void supprimerProduit(Long idP);
 	public void modifierProduit(Produit p);
 	public void ajouterUser(User u);
+	public List<User> listUsers();
+	public User getUser(Long idUser);
+	public void supprimerUser(Long idUser);
+	public void modifierUser(User u);
 	public void attribuerRole(Long roleID,Long userID);
 	public Commande enregistrerCommande(Panier p,Client c);
 }

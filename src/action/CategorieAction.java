@@ -65,22 +65,22 @@ public class CategorieAction extends ActionSupport {
 		if(!editMode)
 			adminCategoriesService.ajouterUser(user);
 		else{
-			adminCategoriesService.
+			adminCategoriesService.modifierUser(user);
 			editMode=false;
-			categorie=new Categorie();
+			user=new User();
 		}
-		categories=adminCategoriesService.listCategories();
+		users=adminCategoriesService.listUsers();
 		return SUCCESS;
 	}
 	
-	public String updateC() {
+	public String updateU() {
 		editMode=true;
-		categorie=adminCategoriesService.getCategorie(idCat);
-		categories=adminCategoriesService.listCategories();
+		user=adminCategoriesService.getUser(idUser);
+		userss=adminCategoriesService.listUsers();
 		return SUCCESS;
 	}
 	
-	public String deleteC() {
+	public String deleteU() {
 		adminCategoriesService.supprimerCategrorie(idCat);
 		categories=adminCategoriesService.listCategories();
 		return SUCCESS;
