@@ -217,4 +217,33 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		return null;
 	}
 
+	@Override
+	public void deleteCommande(Commande c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Long saveClient(Client c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Client c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateClient(Client c) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	//Client------
+	
+	
+	
+
 }

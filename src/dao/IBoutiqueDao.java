@@ -39,9 +39,15 @@ public interface IBoutiqueDao {
 	
 	//Commande---------------
 	public Long saveCommande(Commande c);
+	public void deleteCommande(Commande c);
 	
 	public Set<LigneCommande> listerLigneCommande();
 	
 	public Set<LigneCommande> listerLigneCommande(Long idClient);
+	
+	//Client-----------------
+	public Long saveClient(Client c);
+	public void delete(Client c);
+	public void updateClient(Client c);
 }
 
