@@ -34,5 +34,12 @@ public interface IBoutiqueDao {
 	public void attribuerRole(Long roleID,Long userID);
 	public List<Role> listRoles();
 	public Commande enregistrerCommande(Panier p,Client c);
+	
+	//Commande---------------
+	public Long saveCommande(Commande c);
+	
+	public String listerLigneCommande();
+	
+	public String listerLigneCommande(Long idClient);
 }
 

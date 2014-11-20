@@ -195,5 +195,20 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		return commande;
 		
 	}
+	
+	//ko
+	public String listerLigneCommande(){
+		return null;
+	}
+	
+	//ko
+	public String listerLigneCommande(Long idClient){
+		return null;
+	}
+	
+	//ko
+	public Long saveCommande(Commande c){
+		return null;
+	}
 
 }
