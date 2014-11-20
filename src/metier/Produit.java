@@ -24,10 +24,6 @@ public class Produit implements Serializable{
 	@JoinColumn(name = "categorie", referencedColumnName ="idCategorie")
 	private Categorie categorie;
 	
-	
-	
-	
-	
 /*-------------------------------------------------*/	
 	public Produit() {
 		super();
@@ -121,12 +117,6 @@ public void setCategorie(Categorie categorie) {
 }
 
 
-
-
-
-
-
-	
 /*-------------------------------------------------*/		
 	
 
