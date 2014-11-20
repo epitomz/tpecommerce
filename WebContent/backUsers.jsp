@@ -5,14 +5,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Gérer les utilisateurs</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 </head>
 <body class="bodclass">
 	<h1>Gestionnnaire Utilisateurs</h1>
 	
-	<div class="backform">
+	<div class="backform formUser">
 		<form action="saveU" method="post">
 			<s:hidden name="user.idUser"/>
 			<s:textfield label="Nom de l'utilisateur" name="user.userName"></s:textfield><br />
@@ -57,9 +58,11 @@
 			</tr>
 			</s:iterator>
 		</table>
-	
+	<div class="menuRetour">
+		<s:a href="index.jsp">Accueil</s:a> <s:a href="backCategorie.jsp" action="listC">Gestionnaire des catégories</s:a>
 	</div>
-	<s:a href="index.jsp">Accueil</s:a> <s:a href="backCategorie.jsp" action="listC">Gestionnaire des catégories</s:a>
+	</div>
+	
  
 </body>
 

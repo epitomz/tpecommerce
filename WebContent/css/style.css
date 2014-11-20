@@ -165,6 +165,22 @@ h1 {
 	margin-top: 20px;
 }
 
+.formUser {
+	height: 140px;
+}
+
+.formUser #user_password {
+	margin-left: 40px;
+}
+
+.formUser #idRole {
+	margin-left: 104px;
+}
+
+.formUser #user_actived {
+	margin-left: 146px;
+}
+
 .menuRetour {
 	text-align: center;
 	margin-top: 50px;
