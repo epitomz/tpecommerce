@@ -150,7 +150,11 @@ public class ClientAction extends ActionSupport {
 	
 	public String majTotal(Set<LigneCommande> listeLigneCommande){
 		
+		total = 0;
 		
+		for(LigneCommande c : listeLigneCommande){
+			total = total + c.getProduit().getPrix() * c.getQuantite();
+		}
 		
 		return SUCCESS;
 		
