@@ -51,8 +51,8 @@
 					<td><s:property value="userName" /></td>
 					<td><s:property value="role.roleName" /></td>
 					<td><s:property value="actived" /></td>
-					<td><s:property value="modifier" /><s:a href="%{lien1}">Edit</s:a></td>
-					<td><s:property value="supprimer" /><s:a href="%{lien2}">Delete</s:a></td>
+					<td><s:property value="modifier" /><s:a href="%{lien1}">Modifier</s:a></td>
+					<td><s:property value="supprimer" /><s:a href="%{lien2}">Supp</s:a></td>
 			</tr>
 			</s:iterator>
 		</table>
