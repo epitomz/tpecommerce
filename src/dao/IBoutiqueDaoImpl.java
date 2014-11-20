@@ -2,6 +2,7 @@ package dao;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -269,8 +270,11 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	
 	//ko
 	public Set<LigneCommande> listerLigneCommande(){
-		return null;
+		Set<LigneCommande> list= new HashSet<LigneCommande>();
+		list=(Set<LigneCommande>) getSession().createQuery("FROM LigneCommande").list();
+		return list;
 	}
+	
 
 	//ko
 	public Set<LigneCommande> listerLigneCommande(Long idClient){
