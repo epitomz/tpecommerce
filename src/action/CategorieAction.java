@@ -3,6 +3,7 @@ package action;
 import java.util.List;
 
 import metier.Categorie;
+import metier.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -14,8 +15,12 @@ public class CategorieAction extends ActionSupport {
 	private long idRole;
 	private Categorie categorie;
 	private List<Categorie> categories;
-	private boolean editMode=false;
 	private long idCat;
+	private boolean editMode=false;
+	
+	private User user;
+	private List<User> users;
+	private long idUser;
 	
 	
 	@Autowired
@@ -51,6 +56,37 @@ public class CategorieAction extends ActionSupport {
 		return SUCCESS;
 	}
 
+	public String listeU() {
+		users=adminCategoriesService.listUsers();
+		return SUCCESS;
+	}
+	
+	public String saveU() {
+		if(!editMode)
+			adminCategoriesService.ajouterUser(user);
+		else{
+			adminCategoriesService.
+			editMode=false;
+			categorie=new Categorie();
+		}
+		categories=adminCategoriesService.listCategories();
+		return SUCCESS;
+	}
+	
+	public String updateC() {
+		editMode=true;
+		categorie=adminCategoriesService.getCategorie(idCat);
+		categories=adminCategoriesService.listCategories();
+		return SUCCESS;
+	}
+	
+	public String deleteC() {
+		adminCategoriesService.supprimerCategrorie(idCat);
+		categories=adminCategoriesService.listCategories();
+		return SUCCESS;
+	}
+	
+	
 	public Categorie getCategorie() {
 		return categorie;
 	}
@@ -103,6 +139,32 @@ public class CategorieAction extends ActionSupport {
 
 	public void setIdCat(long idCat) {
 		this.idCat = idCat;
+	}
+
+	
+	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public List<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(List<User> users) {
+		this.users = users;
+	}
+
+	public long getIdUser() {
+		return idUser;
+	}
+
+	public void setIdUser(long idUser) {
+		this.idUser = idUser;
 	}
 
 	public void attribuerRole() {
