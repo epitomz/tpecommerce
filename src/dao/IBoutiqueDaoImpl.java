@@ -241,30 +241,30 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	}
 	
 	//LigneCommande-------------------------------------
-
+	//--
 	@Override
 	public Long saveLigneCommande(LigneCommande l) {
 		// TODO Auto-generated method stub
 		return (Long) getSession().save(l);
 	}
-
+	//--
 	@Override
 	public void deleteLigneCommande(Long idLigneCommande) {
 		// TODO Auto-generated method stub
-		this.getSession().delete(this.getClient(idLigneCommande));
+		this.getSession().delete(this.getLigneCommande(idLigneCommande));
 		
 	}
-
+	//--
 	@Override
 	public void updateLigneCommande(LigneCommande l) {
 		// TODO Auto-generated method stub
-		
+		this.getSession().update(l);		
 	}
-
+	//--
 	@Override
 	public LigneCommande getLigneCommande(Long idLigneCommande) {
 		// TODO Auto-generated method stub
-		return null;
+		return (LigneCommande) this.getSession().get(LigneCommande.class, idLigneCommande);
 	}
 	
 	//ko
