@@ -2,12 +2,9 @@ package action;
 
 import java.util.Map;
 
-import javax.servlet.http.HttpSession;
-
 import metier.Role;
 import metier.User;
 
-import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import service.IAdminCategoriesService;
@@ -27,12 +24,13 @@ public class ConnectAction extends ActionSupport {
 		return SUCCESS;
 	}
 
-	public String connect() {
+	public String connect() throws InterruptedException {
 		String connected=AdminCategoriesService.Authentifier(user);
+		if(connected.equals("success")){}
 		Map session = ActionContext.getContext().getSession();
 		session.put("logined","true");
 		session.put("username", user.getUserName());
-		//session.put("role", user.getRole().getIdRole());	
+		session.put("role", user.getRole().getIdRole());	
 		return connected;
 	}
 	

@@ -10,7 +10,7 @@
 	<!-- mettre les packages et les actions -->
 	<package name="default" namespace="/" extends="struts-default">
 		<default-action-ref name="index"></default-action-ref>
-		<action name="index" class="action.HelloClass">
+		<action name="index" class="action.ProduitAction" method="listeCetP">
 			<result>index.jsp</result>
 		</action>
 		
