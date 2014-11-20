@@ -55,7 +55,7 @@
 		</table>
 	
 	</div>
-	<s:a href="index.jsp"/> <s:a href="backCategorie.jsp" action="listC"/>
+	<s:a href="index.jsp">Acceuil</s:a> <s:a href="backCategorie.jsp" action="listC">Gestionnaire utilisateurs</s:a>
  
 </body>
 
