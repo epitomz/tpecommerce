@@ -17,5 +17,25 @@ public class Role implements Serializable{
 	private String roleName;
 	@OneToMany(mappedBy = "role")
 	private Set<User> users;
+	public long getIdRole() {
+		return idRole;
+	}
+	public void setIdRole(long idRole) {
+		this.idRole = idRole;
+	}
+	public String getRoleName() {
+		return roleName;
+	}
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
+	public Set<User> getUsers() {
+		return users;
+	}
+	public void setUsers(Set<User> users) {
+		this.users = users;
+	}
 
+	
+	
 }
