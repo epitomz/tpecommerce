@@ -13,9 +13,10 @@
 	<h1>Gestionnnaire Utilisateurs</h1>
 	
 	<div class="backform">
-		<form action="saveC" method="post">
-			<s:textfield label="Nom de la catégorie" name="categorie.nomCategorie"></s:textfield><br />
-			<s:textarea label="Description" cols="40" rows="5" name="categorie.description"></s:textarea><br />
+		<form action="saveU" method="post">
+			<s:textfield label="Nom de l'utilisateur" name="user.userName"></s:textfield><br />
+			<s:password label="Mot de passe"  name="user.password"></s:password><br />
+			<s:select label="Role" name="idRole" list="roles" listKey="idRole" listValue="roleName"/>
 			<s:submit type="submit" value="Enregistrer"></s:submit><br />
 			<s:hidden name="editMode"/>
 		</form>
@@ -27,28 +28,26 @@
 			<tr>
 				<th>ID</th>
 				<th>NOM</th>
-				<th>Description</th>
-				<th>Photo</th>
+				<th>Role</th>
 				<th>SUPPR</th> 
 				<th>EDIT</th>
 			</tr>
-			<s:iterator value="categories">
-			<s:url namespace="/" action="updateC" var="lien1">
-			<s:param name="idCat">
-				<s:property value = "idCategorie"></s:property>
+			<s:iterator value="users">
+			<s:url namespace="/" action="updateU" var="lien1">
+			<s:param name="idU">
+				<s:property value = "idUser"></s:property>
 			</s:param>
 			</s:url>
 			
-			<s:url namespace="/" action="deleteC" var="lien2">
-			<s:param name="idCat">
-				<s:property value = "idCategorie"></s:property>
+			<s:url namespace="/" action="deleteU" var="lien2">
+			<s:param name="idU">
+				<s:property value = "idUser"></s:property>
 			</s:param>
 			</s:url>
 			<tr>
-					<td><s:property value="idCategorie" /></td>
-					<td><s:property value="nomCategorie" /></td>
-					<td><s:property value="description" /></td>
-					<td/>
+					<td><s:property value="idUser" /></td>
+					<td><s:property value="userName" /></td>
+					<td><s:property value="role.roleName" /></td>
 					<td><s:property value="modifier" /><s:a href="%{lien1}">Edit</s:a></td>
 					<td><s:property value="supprimer" /><s:a href="%{lien2}">Delete</s:a></td>
 			</tr>
