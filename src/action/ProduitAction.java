@@ -49,6 +49,7 @@ public class ProduitAction extends ActionSupport {
 	}
 	
 	public String updateP() {
+		System.out.println(ref);
 		produit = AdminCategoriesService.getProduit(ref);
 		produits = AdminCategoriesService.listproduits();
 		categories = AdminCategoriesService.listCategories();
