@@ -21,13 +21,16 @@
 		<action name="saveP" class="action.ProduitAction" method="saveP">
 			<result>backProduit.jsp</result>
 		</action>
-		
-		<action name="saveC" class="action.Categoriection" method="saveC">
+		<action name="updateP" class="action.ProduitAction" method="updateP">
 			<result>backProduit.jsp</result>
 		</action>
 		
+		<action name="saveC" class="action.CategorieAction" method="saveC">
+			<result>backCategorie.jsp</result>
+		</action>
+		
 		<action name="listeC" class="action.CategorieAction" method="listeC">
-			<result>backProduit.jsp</result>
+			<result>backCategorie.jsp</result>
 		</action>
 		
 		

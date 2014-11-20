@@ -25,6 +25,7 @@ public class CategorieAction extends ActionSupport {
 	
 	public String saveC() {
 		AdminCategoriesService.ajouterCategorie(categorie);
+		categories=AdminCategoriesService.listCategories();
 		return SUCCESS;
 	}
 	
