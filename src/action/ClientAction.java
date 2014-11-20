@@ -156,7 +156,6 @@ public class ClientAction extends ActionSupport {
 		
 	}
 	
-	pru
 	
 	
 	
