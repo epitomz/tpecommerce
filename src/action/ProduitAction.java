@@ -7,6 +7,7 @@ import metier.Produit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import service.AdminCategoriesServiceImpl;
 import service.IAdminCategoriesService;
 import service.IAdminProduitService;
 
@@ -18,6 +19,7 @@ public class ProduitAction extends ActionSupport {
 	private List<Produit> produits;
 	private long idCat;
 	private List<Categorie> categories;
+	private long ref;
 	
 	@Autowired
 	public IAdminCategoriesService AdminCategoriesService;
@@ -46,6 +48,9 @@ public class ProduitAction extends ActionSupport {
 	}
 	
 	public String updateP() {
+		produit = AdminCategoriesService.getProduit(ref);
+		produits = AdminCategoriesService.listproduits();
+		categories = AdminCategoriesService.listCategories();
 		return SUCCESS;
 	}
 	
