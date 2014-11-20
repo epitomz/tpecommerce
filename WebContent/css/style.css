@@ -115,6 +115,18 @@ h1 {
 	background: white;
 }
 
+.backform #produit_prix {
+	margin-left: 82px;
+}
+
+.backform #produit_quantite {
+	margin-left: 49px;
+}
+
+.backform #produit_selectionne_ {
+	margin-left: 117px;
+}
+
 .backform input {
 	margin-bottom: 10px;
 }

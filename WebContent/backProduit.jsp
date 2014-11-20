@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Site de E-Commerce</title>
+<title>Gérer les produits</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -18,8 +18,8 @@
 			<s:select label="Categorie" name="idCat" list="categories" listKey="idCategorie" listValue="nomCategorie"/><br />
 			<s:textfield label="Nom du produit" name="produit.designation"></s:textfield><br />
 			<s:textarea label="Description" cols="40" rows="5" name="produit.description"></s:textarea><br /><br /><br /><br /><br />
-			<s:textfield label="Prix" name="produit.prix"></s:textfield><br />
-			<s:textfield label="Quantite" name="produit.quantite"></s:textfield><br />
+			<s:textfield class="decale" label="Prix" name="produit.prix"></s:textfield><br />
+			<s:textfield class="decale" label="Quantite" name="produit.quantite"></s:textfield><br />
 			<s:checkbox label="Selectionne" name="produit.selectionne<"></s:checkbox><br />
 			<s:submit type="submit" value="Enregistrer"></s:submit><br />
 		</form>
