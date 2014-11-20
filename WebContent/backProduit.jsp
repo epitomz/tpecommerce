@@ -13,7 +13,7 @@
 	
 	<div class="backform">
 		<form action="saveP" method="post">
-			<s:hidden name="prduit.idProduit"/>
+			<s:hidden name="produit.idProduit"/>
 			<s:hidden name="editMode"/>
 			<s:select label="Categorie" name="idCat" list="categories" listKey="idCategorie" listValue="nomCategorie"/><br />
 			<s:textfield label="Nom du produit" name="produit.designation"></s:textfield><br />
