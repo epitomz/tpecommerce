@@ -198,20 +198,7 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		getSession().save(commande);
 		return commande;
 		
-	}
-	
-
-	
-	//ko
-	public Set<LigneCommande> listerLigneCommande(){
-		return null;
-	}
-	
-	//ko
-	public Set<LigneCommande> listerLigneCommande(Long idClient){
-		return null;
-	}
-	
+	}	
 	//--
 	public Long saveCommande(Commande c){
 		return (Long) getSession().save(c);
@@ -251,6 +238,42 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	@Override
 	public void updateClient(Client c) {
 		this.getSession().update(c);		
+	}
+	
+	//LigneCommande-------------------------------------
+
+	@Override
+	public Long saveLigneCommande(LigneCommande l) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteLigneCommande(Long idLigneCommande) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateLigneCommande(LigneCommande l) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public LigneCommande getLigneCommande(Long idLigneCommande) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	//ko
+	public Set<LigneCommande> listerLigneCommande(){
+		return null;
+	}
+
+	//ko
+	public Set<LigneCommande> listerLigneCommande(Long idClient){
+		return null;
 	}
 	
 
