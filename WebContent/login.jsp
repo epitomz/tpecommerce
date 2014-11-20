@@ -12,9 +12,9 @@
 
 <div class="connexion">
 	<h2>Connexion au site</h2>
-		<s:form name="connexion" action="connexion" method="post">
+		<s:form name="connexion" action="connect" method="post">
 			<s:textfield label="Identifiant" name="user.userName"></s:textfield>
-			<s:password label="Mot de passe" type="password" name="user.password"></s:password>
+			<s:password label="Mot de passe" name="user.password"></s:password>
 			<s:submit value="Se connecter"></s:submit>
 		</s:form>
 </div>

@@ -20,7 +20,8 @@
 	<div class="panier">
 		<h2>Panier</h2>
 		<p>0 article ajouté</p>
-		<a href="">Se connecter</a>
+		<s:url namespace="/" action="login" var="lien1"/>
+	<s:a href="%{lien1}">Se connecter</s:a>
 	</div>
 </div>
 
