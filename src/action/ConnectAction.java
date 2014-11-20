@@ -32,7 +32,7 @@ public class ConnectAction extends ActionSupport {
 		Map session = ActionContext.getContext().getSession();
 		session.put("logined","true");
 		session.put("username", user.getUserName());
-		session.put("role", user.getRole());	
+		//session.put("role", user.getRole().getIdRole());	
 		return SUCCESS;
 	}
 	

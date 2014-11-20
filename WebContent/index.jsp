@@ -13,6 +13,14 @@
 <div class="entete">
 	<h1>Site de E-Commerce de la bombe</h1>
 	<s:url namespace="/" action="liste" var="lien1"/>
+	<s:if test="#session.role == '1'">
+		<s:a href="backCategorie.jsp">Gérer les catégories</s:a>
+		<s:a href="backProduit.jsp">Gérer les produits</s:a>
+	</s:if>
+	<s:elseif test="#session.role == '2'">
+		<s:a href="backProduit.jsp">Gérer les produits</s:a>
+	</s:elseif>
+
 	<s:a href="%{lien1}">Back</s:a>
 	<form>
 		<input type="text"></input>
