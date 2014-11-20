@@ -18,6 +18,14 @@ import dao.IBoutiqueDao;
 @Component
 public class ClientServiceImpl implements IClientService{
 	
+	@Autowired
+	private IBoutiqueDao dao;
+
+	@Override
+	public Long saveCommande(Commande c) {
+		// TODO Auto-generated method stub
+		return dao.saveCommande(c);
+	}
 	
 
 }

@@ -1,8 +1,11 @@
 package service;
 
-import metier.Produit;
+import metier.Commande;
 
 public interface IClientService extends InternauteBoutiqueService {
+	
+	public Long saveCommande(Commande c);
+	
 	
 
 }
