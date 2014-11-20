@@ -109,6 +109,14 @@ public class ProduitAction extends ActionSupport {
 		AdminCategoriesService = adminCategoriesService;
 	}
 
+	public long getRef() {
+		return ref;
+	}
+
+	public void setRef(long ref) {
+		this.ref = ref;
+	}
+
 	
 	
 	
