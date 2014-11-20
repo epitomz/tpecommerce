@@ -154,12 +154,7 @@ public class ClientAction extends ActionSupport {
 	}
 	
 	public String listerLigneCommande(){
-		if(idClient == null)
-		{
-			listeLigneCommande = dao.listerLigneCommande();
-		}
-		else
-		{
+
 			
 			client = dao.getClient(idClient);
 			commande.setClient(client);
@@ -175,9 +170,8 @@ public class ClientAction extends ActionSupport {
 			
 			dao.saveLigneCommande(ligneCommande);
 			
-			listeLigneCommande = dao.listerLigneCommande(idClient);
-		}
-		
+			listeLigneCommande = dao.listerLigneCommande(idCommande);
+				
 		return SUCCESS;
 	}
 	
