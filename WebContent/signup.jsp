@@ -13,8 +13,14 @@
 <div class="connexion">
 	<h2>S'enregistrer</h2>
 		<s:form name="enregistrement" action="saveUser" method="post">
+			<tr><td colspan="2"><h3>Identifiants de connexion</h3></td></tr>
 			<s:textfield label="Identifiant" name="user.userName"></s:textfield>
 			<s:password label="Mot de passe" name="user.password"></s:password>
+			<tr><td colspan="2"><h3>Informations personnelles</h3></td></tr>
+			<s:textfield label="Nom" name="client.nomClient"></s:textfield>
+			<s:textfield label="Adresse" name="client.adresse"></s:textfield>
+			<s:textfield label="Email" name="client.email"></s:textfield>
+			<s:textfield label="Telephone" name="client.tel"></s:textfield>
 			<s:submit value="S'enregistrer"></s:submit>
 		</s:form>
 </div>
