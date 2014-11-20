@@ -28,12 +28,12 @@ public class ConnectAction extends ActionSupport {
 	}
 
 	public String connect() {
-		AdminCategoriesService.Authentifier(user);
+		String connected=AdminCategoriesService.Authentifier(user);
 		Map session = ActionContext.getContext().getSession();
 		session.put("logined","true");
 		session.put("username", user.getUserName());
 		//session.put("role", user.getRole().getIdRole());	
-		return SUCCESS;
+		return connected;
 	}
 	
 	public String logout() {

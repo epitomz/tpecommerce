@@ -73,7 +73,8 @@
 		</action>
 		
 		<action name="connect" class="action.ConnectAction" method="connect">
-			<result>index.jsp</result>
+			<result name="success">index.jsp</result>
+			<result name="fail">login.jsp</result>
 		</action>
 		
 		<action name="saveUser" class="action.CategorieAction" method="saveU">
