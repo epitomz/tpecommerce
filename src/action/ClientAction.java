@@ -161,13 +161,13 @@ public class ClientAction extends ActionSupport {
 	}
 	
 	public String saveLigneCommande(){
-		
+		dao.saveLigneCommande(ligneCommande);
 		return SUCCESS;
 		
 	}
 	
 	public String saveCommande(){
-		
+		dao.saveCommande(commande);
 		return SUCCESS;
 		
 	}
@@ -175,7 +175,7 @@ public class ClientAction extends ActionSupport {
 
 	
 	public String updateClient(){
-		
+		dao.updateClient(client);
 		return SUCCESS;
 		
 	}
