@@ -1,6 +1,13 @@
 body {
 	font-family: helvetica;
+	background: #f2f2f2;
+	margin: 0;
 }
+
+h1 {
+	color: #1b3834;
+}
+
 .entete {
 	width: 100%;
 	height: 150px;
@@ -25,10 +32,6 @@ body {
 	display: inline-block;
 	float: left;
 	background-color: #d4d4d4;
-}
-
-body {
-	margin: 0;
 }
 
 .panier {
@@ -81,19 +84,63 @@ body {
 }
 
 .backform {
-	margin-bottom: 30px;
-}
-
-.bodclass th {
+	background-color: #1b3834;
 	border: 1px solid grey;
+	padding: 30px;
+	width: 500px;
+	margin: 0 auto;
+	color: white;
+	border-radius: 10px;
+	margin-bottom: 30px;
 }
 
 .bodclass td{
 	border: 1px solid grey;
+	min-width: 40px;
+	padding: 0 10px;
+	height: 30px;
+}
+
+.bodclass th{
+	border: 1px solid grey;
+	background-color: #1b3834;
+	color: white;
+	padding: 0 10px;
+}
+
+.bodclass table {
+	border-spacing: 0;
+	margin: 0 auto;
+	border-collapse:collapse;
+	background: white;
 }
 
 .backform input {
 	margin-bottom: 10px;
+}
+
+.backform select {
+	margin-bottom: 10px;
+	margin-left: 40px;
+}
+
+.backform textarea {
+	margin-right: 79px;
+	float: right;
+}
+
+.backform input[type="submit"] {
+	float: left;
+	height: 30px;
+	width: 120px;
+	background-color: white;
+	margin-top: 5px;
+	margin-left: 200px;
+}
+
+.backform input[type="submit"]:hover {
+	cursor: pointer;
+	background-color: #f0f0f0;
 }
 
 /* Connexion */
