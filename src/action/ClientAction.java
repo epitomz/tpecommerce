@@ -160,6 +160,7 @@ public class ClientAction extends ActionSupport {
 		}
 		else
 		{
+			
 			client = dao.getClient(idClient);
 			commande.setClient(client);
 			commande.setDateCommande(new Date());
