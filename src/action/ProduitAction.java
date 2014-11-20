@@ -54,6 +54,12 @@ public class ProduitAction extends ActionSupport {
 		produit = new Produit();
 		return SUCCESS;
 	}
+	
+	public String listeProduitparCategorie(){
+		categories = AdminCategoriesService.listCategories();
+		produits=AdminCategoriesService.produitsParCategorie(idCat);
+		return SUCCESS;
+	}
 
 	public String updateP() {
 		editMode = true;
