@@ -64,6 +64,7 @@ public class ProduitAction extends ActionSupport {
 	public String deleteP() {
 		AdminCategoriesService.supprimerProduit(ref);
 		this.listeCetP();
+		produit = new Produit();
 		return SUCCESS;
 	}
 
