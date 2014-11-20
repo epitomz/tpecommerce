@@ -26,6 +26,7 @@ public class ClientAction extends ActionSupport {
 	private Client client;
 	private Long idClient;
 	private double total;
+	private int quantite;
 	private LigneCommande ligneCommande;
 	private Long idLigneCommande;
 	private Set<LigneCommande> listeLigneCommande;
@@ -37,6 +38,23 @@ public class ClientAction extends ActionSupport {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
+
+	public int getQuantite() {
+		return quantite;
+	}
+
+
+
+
+	public void setQuantite(int quantite) {
+		this.quantite = quantite;
+	}
+
+
+
 
 	public Produit getProduit() {
 		return produit;
@@ -137,9 +155,13 @@ public class ClientAction extends ActionSupport {
 	public String listerLigneCommande(){
 		if(idClient == null)
 		{
-		listeLigneCommande = dao.listerLigneCommande();
+			listeLigneCommande = dao.listerLigneCommande();
 		}
-		else{
+		else
+		{
+			ligneCommande.setQuantite(quantite);
+			ligneCommande.setProduit(produit);
+			
 			listeLigneCommande = dao.listerLigneCommande(idClient);
 		}
 		
@@ -153,6 +175,7 @@ public class ClientAction extends ActionSupport {
 		total = 0;
 		
 		for(LigneCommande c : listeLigneCommande){
+			c.setProduit(dao.getProduit(c.getProduit().getIdProduit()));
 			total = total + c.getProduit().getPrix() * c.getQuantite();
 		}
 		
