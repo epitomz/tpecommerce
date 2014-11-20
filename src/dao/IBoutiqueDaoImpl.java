@@ -149,7 +149,7 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	@Override
 	public List<User> listUsers() {
 		List<User> list= new ArrayList<User>();
-		list=getSession().createQuery("FROM Produit").list();
+		list=getSession().createQuery("FROM User").list();
 		return list;
 	}
 
@@ -180,6 +180,11 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		
 	}
 	
+	public List<Role> listRoles(){
+		List<Role> list= new ArrayList<Role>();
+		list=getSession().createQuery("FROM Role").list();
+		return list;
+	}
 	
 	public Commande enregistrerCommande(Panier p,Client c){
 		Commande commande=new Commande();

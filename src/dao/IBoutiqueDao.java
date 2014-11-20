@@ -32,6 +32,7 @@ public interface IBoutiqueDao {
 	public void supprimerUser(Long idUser);
 	public void modifierUser(User u);
 	public void attribuerRole(Long roleID,Long userID);
+	public List<Role> listRoles();
 	public Commande enregistrerCommande(Panier p,Client c);
 }
 

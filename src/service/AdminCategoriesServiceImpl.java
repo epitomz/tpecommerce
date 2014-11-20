@@ -7,6 +7,7 @@ import metier.Client;
 import metier.Commande;
 import metier.Panier;
 import metier.Produit;
+import metier.Role;
 import metier.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -139,7 +140,13 @@ public class AdminCategoriesServiceImpl implements IAdminCategoriesService {
 		dao.ajouterUser(u);
 		
 	}
-
+	
+	@Override
+	public List<Role> listRoles(){
+		return dao.listRoles();
+		
+	}
+	
 	@Override
 	public void attribuerRole(Long roleID, Long userID) {
 		dao.attribuerRole(roleID, userID);

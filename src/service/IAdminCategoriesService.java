@@ -4,6 +4,7 @@ package service;
 import java.util.List;
 
 import metier.Categorie;
+import metier.Role;
 import metier.User;
 
 public interface IAdminCategoriesService extends IAdminProduitService {
@@ -17,5 +18,6 @@ public interface IAdminCategoriesService extends IAdminProduitService {
 	public void supprimerUser(Long idUser);
 	public void modifierUser(User u);
 	public void attribuerRole(Long roleID,Long userID);
+	public List<Role> listRoles();
 
 }

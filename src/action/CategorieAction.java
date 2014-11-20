@@ -13,7 +13,7 @@ import service.IAdminCategoriesService;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class CategorieAction extends ActionSupport {
-	private long idRole;
+	
 	private Categorie categorie;
 	private List<Categorie> categories;
 	private long idCat;
@@ -21,8 +21,9 @@ public class CategorieAction extends ActionSupport {
 	
 	private User user;
 	private List<User> users;
-	private long idUser;
+	private long idU;
 	private List<Role> roles;
+	private long idRole;
 	
 	
 	@Autowired
@@ -60,6 +61,7 @@ public class CategorieAction extends ActionSupport {
 
 	public String listeU() {
 		users=adminCategoriesService.listUsers();
+		roles=adminCategoriesService.listRoles();
 		return SUCCESS;
 	}
 	
@@ -77,7 +79,7 @@ public class CategorieAction extends ActionSupport {
 	
 	public String updateU() {
 		editMode=true;
-		user=adminCategoriesService.getUser(idUser);
+		user=adminCategoriesService.getUser(idU);
 		users=adminCategoriesService.listUsers();
 		return SUCCESS;
 	}
@@ -161,17 +163,21 @@ public class CategorieAction extends ActionSupport {
 		this.users = users;
 	}
 
-	public long getIdUser() {
-		return idUser;
+	public long getIdU() {
+		return idU;
 	}
 
-	public void setIdUser(long idUser) {
-		this.idUser = idUser;
+	public void setIdU(long idUser) {
+		this.idU = idUser;
 	}
 
-	public void attribuerRole() {
+	public List<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}
 	
-	}
-
 
 }
