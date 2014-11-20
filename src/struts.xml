@@ -72,6 +72,9 @@
 			<result>index.jsp</result>
 		</action>
 		
+		<action name="saveUser" class="action.CategorieAction" method="saveU">
+			<result>index.jsp</result>
+		</action>
 		
 		
 	</package>
