@@ -55,6 +55,6 @@
 		</table>
 	
 	</div>
-
+	<s:a href="index.jsp"/> <s:a href="backUsers.jsp" action="listU"/>
 </body>
 </html>

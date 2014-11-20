@@ -55,7 +55,8 @@
 		</table>
 	
 	</div>
-
+	<s:a href="index.jsp"/> <s:a href="backCategorie.jsp" action="listC"/>
+ 
 </body>
 
 </body>
