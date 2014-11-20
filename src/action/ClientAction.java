@@ -1,5 +1,6 @@
 package action;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -159,8 +160,19 @@ public class ClientAction extends ActionSupport {
 		}
 		else
 		{
+			client = dao.getClient(idClient);
+			commande.setClient(client);
+			commande.setDateCommande(new Date());
+			
+			idCommande = dao.saveCommande(commande);			
+			commande.setIdCommande(idCommande);
+			
+			ligneCommande.setCommande(commande);
+			ligneCommande.setPrix((int) (quantite*produit.getPrix()));
 			ligneCommande.setQuantite(quantite);
 			ligneCommande.setProduit(produit);
+			
+			dao.saveLigneCommande(ligneCommande);
 			
 			listeLigneCommande = dao.listerLigneCommande(idClient);
 		}
