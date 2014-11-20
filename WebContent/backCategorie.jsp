@@ -10,7 +10,7 @@
 	<h1>Ajouter une categorie en base</h1>
 	
 	<div class="backform">
-		<form action="saveP" method="post">
+		<form action="saveC" method="post">
 			<s:textfield label="Nom de la catégorie" name="categorie.nomCategorie"></s:textfield><br />
 			<s:textarea label="Description" cols="40" rows="5" name="categorie.description"></s:textarea><br />
 			<s:submit type="submit" value="Enregistrer"></s:submit><br />
@@ -30,13 +30,13 @@
 			</tr>
 			<s:iterator value="catégories">
 			
-			<s:url namespace="/" action="updateP" var="lien1">
+			<s:url namespace="/" action="updateC" var="lien1">
 			<s:param name="ref">
 				<s:property value = "idProduit"></s:property>
 			</s:param>
 			</s:url>
 			
-			<s:url namespace="/" action="deleteP" var="lien2">
+			<s:url namespace="/" action="deleteC" var="lien2">
 			<s:param name="ref">
 				<s:property value = "idProduit"></s:property>
 			</s:param>
