@@ -212,9 +212,14 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		return null;
 	}
 	
-	//ko
+	//--
 	public Long saveCommande(Commande c){
-		return null;
+		return (Long) getSession().save(c);
+	}
+	
+	@Override
+	public void updateCommande(Commande c) {
+		this.getSession().update(c);		
 	}
 
 	@Override
@@ -227,8 +232,7 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	
 	@Override
 	public Long saveClient(Client c) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Long) getSession().save(c);
 	}
 
 	@Override
@@ -239,8 +243,7 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 
 	@Override
 	public void updateClient(Client c) {
-		// TODO Auto-generated method stub
-		
+		this.getSession().update(c);		
 	}
 	
 
