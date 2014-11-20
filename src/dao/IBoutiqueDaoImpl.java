@@ -217,6 +217,7 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		return (Long) getSession().save(c);
 	}
 	
+	//--
 	@Override
 	public void updateCommande(Commande c) {
 		this.getSession().update(c);		
@@ -229,18 +230,25 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	}
 	
 	//Client------
-	
+	//--
 	@Override
 	public Long saveClient(Client c) {
 		return (Long) getSession().save(c);
 	}
 
+	//--
 	@Override
-	public void delete(Client c) {
-		// TODO Auto-generated method stub
-		
+	public void deleteClient(Long idClient) {
+		this.getSession().delete(this.getClient(idClient));
 	}
-
+	
+	//--
+	@Override
+	public Client getClient(Long idClient) {
+		return (Client) this.getSession().get(Client.class, idClient);
+	}
+	
+	//--
 	@Override
 	public void updateClient(Client c) {
 		this.getSession().update(c);		

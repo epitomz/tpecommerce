@@ -48,7 +48,8 @@ public interface IBoutiqueDao {
 	
 	//Client-----------------
 	public Long saveClient(Client c);
-	public void delete(Client c);
+	public void deleteClient(Long idClient);
 	public void updateClient(Client c);
+	public Client getClient(Long idClient);
 }
 
