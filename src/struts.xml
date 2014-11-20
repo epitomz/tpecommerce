@@ -81,6 +81,10 @@
 			<result>index.jsp</result>
 		</action>
 		
+		<action name="ajoutPanier" class="action.ClientAction" method="listerLigneCommande">
+			<result>panier.jsp</result>
+		</action>
+		
 		
 	</package>
 

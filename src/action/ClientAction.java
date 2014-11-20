@@ -160,6 +160,25 @@ public class ClientAction extends ActionSupport {
 		
 	}
 	
+	public String saveLigneCommande(){
+		
+		return SUCCESS;
+		
+	}
+	
+	public String saveCommande(){
+		
+		return SUCCESS;
+		
+	}
+	
+
+	
+	public String updateClient(){
+		
+		return SUCCESS;
+		
+	}
 	
 	
 	
