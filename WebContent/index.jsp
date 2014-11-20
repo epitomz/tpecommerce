@@ -55,11 +55,10 @@
 <div class="contenu">
 	<s:iterator value="produits">
 		<div class="objet">
-			<td><s:property value="idProduit" /></td><br />
-			<td><s:property value="designation" /></td><br />
-			<td><s:property value="description" /></td><br />
-			<td><s:property value="prix" /></td><br />
-			<td><s:property value="quantite" /></td><br />
+			<td>Nom : <s:property value="designation" /></td><br />
+			<td>Desc : <s:property value="description" /></td><br />
+			<td>Prix : <s:property value="prix" /></td><br />
+			<td>Qte : <s:property value="quantite" /></td><br />
 			<td><s:textfield label="Quantite" name="quantite"></s:textfield></td><br />
 			<td><s:a href="panier.jsp" action="ajoutPanier">Ajouter au panier</s:a>
 		</div>
