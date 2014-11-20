@@ -222,7 +222,9 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		// TODO Auto-generated method stub
 		
 	}
-
+	
+	//Client------
+	
 	@Override
 	public Long saveClient(Client c) {
 		// TODO Auto-generated method stub
@@ -240,10 +242,6 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		// TODO Auto-generated method stub
 		
 	}
-	
-	//Client------
-	
-	
 	
 
 }
