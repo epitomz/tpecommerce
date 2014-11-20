@@ -16,6 +16,7 @@
 			<tr><td colspan="2"><h3>Identifiants de connexion</h3></td></tr>
 			<s:textfield label="Identifiant" name="user.userName"></s:textfield>
 			<s:password label="Mot de passe" name="user.password"></s:password>
+			<s:hidden name="user.actived" value="true"/>
 			<tr><td colspan="2"><h3>Informations personnelles</h3></td></tr>
 			<s:textfield label="Nom" name="client.nomClient"></s:textfield>
 			<s:textfield label="Adresse" name="client.adresse"></s:textfield>

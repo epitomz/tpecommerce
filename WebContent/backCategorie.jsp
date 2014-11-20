@@ -56,7 +56,7 @@
 			</s:iterator>
 		</table>
 	<div class="menuRetour">
-		<s:a href="index.jsp">Accueil</s:a> <s:a href="backUsers.jsp" action="listU">Gestionnaire des utilisateurs</s:a>
+		<s:a href="index">Accueil</s:a> <s:a href="backUsers" action="listU">Gestionnaire des utilisateurs</s:a>
 	</div>
 	</div>
 	
