@@ -31,8 +31,8 @@
 				<th>NOM</th>
 				<th>Role</th>
 				<th>ACTIVED</th>
-				<th>SUPPR</th> 
 				<th>EDIT</th>
+				<th>SUPPR</th> 
 			</tr>
 			<s:iterator value="users">
 			<s:url namespace="/" action="updateU" var="lien1">
