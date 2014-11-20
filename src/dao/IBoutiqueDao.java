@@ -1,10 +1,12 @@
 package dao;
 
 import java.util.List;
+import java.util.Set;
 
 import metier.Categorie;
 import metier.Client;
 import metier.Commande;
+import metier.LigneCommande;
 import metier.Panier;
 import metier.Produit;
 import metier.Role;
@@ -38,8 +40,8 @@ public interface IBoutiqueDao {
 	//Commande---------------
 	public Long saveCommande(Commande c);
 	
-	public String listerLigneCommande();
+	public Set<LigneCommande> listerLigneCommande();
 	
-	public String listerLigneCommande(Long idClient);
+	public Set<LigneCommande> listerLigneCommande(Long idClient);
 }
 

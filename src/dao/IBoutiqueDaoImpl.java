@@ -3,10 +3,12 @@ package dao;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import metier.Categorie;
 import metier.Client;
 import metier.Commande;
+import metier.LigneCommande;
 import metier.Panier;
 import metier.Produit;
 import metier.Role;
@@ -201,12 +203,12 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 
 	
 	//ko
-	public String listerLigneCommande(){
+	public Set<LigneCommande> listerLigneCommande(){
 		return null;
 	}
 	
 	//ko
-	public String listerLigneCommande(Long idClient){
+	public Set<LigneCommande> listerLigneCommande(Long idClient){
 		return null;
 	}
 	
