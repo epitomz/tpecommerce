@@ -11,7 +11,7 @@
 
 <div class="connexion">
 	<h2>S'enregistrer</h2>
-		<s:form name="enregistrement" action="signup" method="post">
+		<s:form name="enregistrement" action="saveUser" method="post">
 			<s:textfield label="Identifiant" name="user.userName"></s:textfield>
 			<s:password label="Mot de passe" name="user.password"></s:password>
 			<s:submit value="S'enregistrer"></s:submit>
