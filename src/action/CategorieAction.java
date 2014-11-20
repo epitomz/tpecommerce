@@ -3,12 +3,14 @@ package action;
 import java.util.List;
 
 import metier.Categorie;
+import metier.Client;
 import metier.Role;
 import metier.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import service.IAdminCategoriesService;
+import service.IClientService;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -25,9 +27,29 @@ public class CategorieAction extends ActionSupport {
 	private List<Role> roles;
 	private long idRole=3;
 	
+	private Client client;
 	
+	public Client getClient() {
+		return client;
+	}
+
+	public void setClient(Client client) {
+		this.client = client;
+	}
+
+	public IClientService getClientService() {
+		return clientService;
+	}
+
+	public void setClientService(IClientService clientService) {
+		this.clientService = clientService;
+	}
+
 	@Autowired
 	public IAdminCategoriesService adminCategoriesService;
+	
+	@Autowired
+	public IClientService clientService;
 	
 	public String listeC() {
 		categories=adminCategoriesService.listCategories();
@@ -69,6 +91,7 @@ public class CategorieAction extends ActionSupport {
 		if(!editMode){
 			idU=adminCategoriesService.ajouterUser(user);
 			attribuerRole(idRole, idU);
+			clientService.saveClient(client);
 		}
 		else{
 			adminCategoriesService.modifierUser(user);
