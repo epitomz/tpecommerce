@@ -96,3 +96,19 @@ body {
 	margin-bottom: 10px;
 }
 
+/* Connexion */
+.connexion {
+	margin: 0 auto;
+	width: 300px;
+	border: 1px solid grey;
+	padding: 50px;
+	background-color: #f0f0f0;
+	border-radius: 15px;
+	margin-top: 200px;
+}
+
+.connexion input[type="submit"] {
+	margin-top: 15px;
+	height: 30px;
+	width: 120px;
+}
