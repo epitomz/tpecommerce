@@ -33,62 +33,62 @@ public class ClientServiceImpl implements IClientService{
 	@Override
 	public void deleteCommande(Long idCommande) {
 		// TODO Auto-generated method stub
-		
+		dao.deleteCommande(idCommande);
 	}
 	
 	@Override
 	public Commande getCommande(Long idCommande) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.getCommande(idCommande);
 	}
 
 
 	@Override
 	public void updateCommande(Commande c) {
 		// TODO Auto-generated method stub
-		
+		dao.updateCommande(c);
 	}
 
 	//LigneCommande------------------------------------------------------------------
 	@Override
 	public Long saveLigneCommande(LigneCommande l) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.saveLigneCommande(l);
 	}
 
 
 	@Override
 	public void deleteLigneCommande(Long idLigneCommande) {
 		// TODO Auto-generated method stub
-		
+		dao.deleteLigneCommande(idLigneCommande);
 	}
 
 
 	@Override
 	public void updateLigneCommande(LigneCommande l) {
 		// TODO Auto-generated method stub
-		
+		dao.updateLigneCommande(l);
 	}
 
 
 	@Override
 	public LigneCommande getLigneCommande(Long idLigneCommande) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.getLigneCommande(idLigneCommande);
 	}
 
 
 	@Override
 	public Set<LigneCommande> listerLigneCommande() {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.listerLigneCommande();
 	}
 
 
 	@Override
 	public Set<LigneCommande> listerLigneCommande(Long idClient) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.listerLigneCommande(idClient);
 	}
 
 	//Client--------------------------------------------------------------------------
@@ -96,13 +96,14 @@ public class ClientServiceImpl implements IClientService{
 	@Override
 	public Long saveClient(Client c) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.saveClient(c);
 	}
 
 
 	@Override
 	public void deleteClient(Long idClient) {
 		// TODO Auto-generated method stub
+		dao.deleteClient(idClient);
 		
 	}
 
@@ -110,14 +111,14 @@ public class ClientServiceImpl implements IClientService{
 	@Override
 	public void updateClient(Client c) {
 		// TODO Auto-generated method stub
-		
+		dao.updateClient(c);
 	}
 
 
 	@Override
 	public Client getClient(Long idClient) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.getClient(idClient);
 	}
 	
 	//Internaute--------------------------------------------------------------------
