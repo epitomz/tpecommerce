@@ -21,6 +21,7 @@
 		<h2>Panier</h2>
 		<p>0 article ajouté</p>
 		<s:url namespace="/" action="login" var="lien1"/>
+	<s:if test="%{#logined == 'True'}">Logout</s:if>
 	<s:a href="%{lien1}">Se connecter</s:a>
 	</div>
 </div>

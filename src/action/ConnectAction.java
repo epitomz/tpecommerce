@@ -1,11 +1,17 @@
 package action;
 
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
 import metier.User;
 
+import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import service.IAdminCategoriesService;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ConnectAction extends ActionSupport {
@@ -21,6 +27,8 @@ public class ConnectAction extends ActionSupport {
 
 	public String connect() {
 		AdminCategoriesService.Authentifier(user);
+		Map session = ActionContext.getContext().getSession();
+		session.put("logined","true");		
 		return SUCCESS;
 	}
 
@@ -29,7 +37,7 @@ public class ConnectAction extends ActionSupport {
 	}
 
 	public void setAdminCategoriesService(
-			IAdminCategoriesService adminCategoriesService) {
+		IAdminCategoriesService adminCategoriesService) {
 		AdminCategoriesService = adminCategoriesService;
 	}
 
