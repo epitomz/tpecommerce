@@ -26,6 +26,10 @@
 			<result>backProduit.jsp</result>
 		</action>
 		
+		<action name="deleteP" class="action.ProduitAction" method="deleteP">
+			<result>backProduit.jsp</result>
+		</action>
+		
 		<action name="saveC" class="action.CategorieAction" method="saveC">
 			<result>backCategorie.jsp</result>
 		</action>
@@ -47,8 +51,6 @@
 		</action>
 		
 		<action name="connect" class="action.ConnectAction" method="connect">
-			<result>backProduit.jsp</result>
-			<result>backCategorie.jsp</result>
 			<result>index.jsp</result>
 		</action>
 		
