@@ -14,6 +14,7 @@
 	
 	<div class="backform">
 		<form action="saveU" method="post">
+			<s:hidden name="user.idUser"/>
 			<s:textfield label="Nom de l'utilisateur" name="user.userName"></s:textfield><br />
 			<s:password label="Mot de passe"  name="user.password"></s:password><br />
 			<s:select label="Role" name="idRole" list="roles" listKey="idRole" listValue="roleName"/><br />

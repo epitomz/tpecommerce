@@ -21,6 +21,7 @@
 	<s:elseif test="#session.role.idRole == 2">
 		<s:a href="backProduit.jsp" action="listP">Gérer les produits</s:a>
 	</s:elseif>
+	<s:else/>
 
 	<s:a href="%{lien1}">Back</s:a>
 	<form>

@@ -74,8 +74,9 @@ public class CategorieAction extends ActionSupport {
 			adminCategoriesService.modifierUser(user);
 			editMode=false;
 			attribuerRole(idRole, user.getIdUser());
-			user=new User();
+			
 		}
+		user=new User();
 		idRole=3;
 		listeU();
 		return SUCCESS;
