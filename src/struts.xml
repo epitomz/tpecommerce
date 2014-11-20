@@ -18,6 +18,10 @@
 			<result>backProduit.jsp</result>
 		</action>
 		
+		<action name="saveP" class="action.ProduitAction" method="saveP">
+			<result>backProduit.jsp</result>
+		</action>
+		
 	</package>
 
 
