@@ -277,9 +277,9 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	
 
 	//ko
-	public Set<LigneCommande> listerLigneCommande(Long idClient){
+	public Set<LigneCommande> listerLigneCommande(Commande c){
 		Set<LigneCommande> list= new HashSet<LigneCommande>();
-		list=(Set<LigneCommande>) getSession().createQuery("FROM LigneCommande l INNER JOIN Commande c WHERE c.idClient=?").setParameter(0, idClient).list();
+		list=(Set<LigneCommande>) getSession().createQuery("FROM LigneCommande l WHERE l.Commande=?").setParameter(0, c).list();
 		return list;
 	}
 	
