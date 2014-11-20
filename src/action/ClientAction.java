@@ -135,18 +135,18 @@ public class ClientAction extends ActionSupport {
 	}
 	
 	public String listerLigneCommande(){
-		
+		if(idClient == null)
+		{
 		listeLigneCommande = dao.listerLigneCommande();
+		}
+		else{
+			listeLigneCommande = dao.listerLigneCommande(idClient);
+		}
 		
 		return SUCCESS;
 	}
 	
-	public String listerLigneCommande(Long idClient){
-		listeLigneCommande = dao.listerLigneCommande(idClient);
-		
-		
-		return SUCCESS;
-	}
+	
 	
 	public String majTotal(Set<LigneCommande> listeLigneCommande){
 		
