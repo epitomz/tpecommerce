@@ -3,6 +3,7 @@ package action;
 import java.util.List;
 
 import metier.Categorie;
+import metier.Role;
 import metier.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ public class CategorieAction extends ActionSupport {
 	private User user;
 	private List<User> users;
 	private long idUser;
+	private List<Role> roles;
 	
 	
 	@Autowired
@@ -76,7 +78,7 @@ public class CategorieAction extends ActionSupport {
 	public String updateU() {
 		editMode=true;
 		user=adminCategoriesService.getUser(idUser);
-		userss=adminCategoriesService.listUsers();
+		users=adminCategoriesService.listUsers();
 		return SUCCESS;
 	}
 	
