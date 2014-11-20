@@ -23,6 +23,14 @@ public class ClientServiceImpl implements IClientService{
 	@Autowired
 	private IBoutiqueDao dao;
 
+	public IBoutiqueDao getDao() {
+		return dao;
+	}
+
+	public void setDao(IBoutiqueDao dao) {
+		this.dao = dao;
+	}
+
 	//Commande----------------------------------------------------------------------
 	@Override
 	public Long saveCommande(Commande c) {
@@ -126,56 +134,56 @@ public class ClientServiceImpl implements IClientService{
 
 	@Override
 	public String Authentifier(User user) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.Authentifier(user);
+		
 	}
 
 	@Override
 	public List<Categorie> listCategories() {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.listCategories();
 	}
 
 	@Override
 	public Categorie getCategorie(Long idCat) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.getCategorie(idCat);
 	}
 
 	@Override
 	public List<Produit> listproduits() {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.listproduits();
 	}
 
 	@Override
 	public List<Produit> produitsParMotCle(String mc) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.produitsParMotCle(mc);
 	}
 
 	@Override
 	public List<Produit> produitsParCategorie(Long idCat) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.produitsParCategorie(idCat);
 	}
 
 	@Override
 	public List<Produit> produitsSelectionnes() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return dao.produitsSelectionnes();
 	}
 
 	@Override
 	public Produit getProduit(Long idP) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.getProduit(idP);
 	}
 
 	@Override
 	public Commande enregistrerCommande(Panier p, Client c) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.enregistrerCommande(p, c);
 	}
 	
 	
