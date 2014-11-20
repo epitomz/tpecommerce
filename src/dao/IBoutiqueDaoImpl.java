@@ -3,7 +3,6 @@ package dao;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 import metier.Categorie;
 import metier.Client;
@@ -67,7 +66,9 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	
 	//--
 	public List<Categorie> listCategories(){
-		return this.getSession().createQuery("FROM Categorie").list();
+		List<Categorie> list=new ArrayList<Categorie>();
+		list=getSession().createQuery("FROM Categorie").list();
+		return list;
 	}
 	
 	//--
@@ -82,7 +83,7 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	
 	//--
 	public void modifierCategorie(Categorie c){
-		this.getSession().update(c);
+		getSession().update(c);
 	}
 	
 	//--

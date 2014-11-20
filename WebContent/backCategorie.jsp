@@ -15,6 +15,7 @@
 			<s:textfield label="Nom de la catégorie" name="categorie.nomCategorie"></s:textfield><br />
 			<s:textarea label="Description" cols="40" rows="5" name="categorie.description"></s:textarea><br />
 			<s:submit type="submit" value="Enregistrer"></s:submit><br />
+			<s:hidden name="editMode"/>
 		</form>
 	</div>
 	
@@ -23,37 +24,31 @@
 		<table>
 			<tr>
 				<th>ID</th>
-				<th>NOM CAT</th>
+				<th>NOM</th>
 				<th>Description</th>
 				<th>Photo</th>
 				<th>SUPPR</th>
 				<th>EDIT</th>
 			</tr>
-			<s:iterator value="catégories">
+			<s:iterator value="categories">
 			<s:url namespace="/" action="updateC" var="lien1">
-			<s:param name="ref">
-				<s:property value = "idProduit"></s:property>
-			</s:param>
-			</s:url>
-			
-			<s:url namespace="/" action="deleteC" var="lien2">
-			<s:param name="ref">
+			<s:param name="idCat">
 				<s:property value = "idCategorie"></s:property>
 			</s:param>
 			</s:url>
 			
+			<s:url namespace="/" action="deleteC" var="lien2">
+			<s:param name="idCat">
+				<s:property value = "idCategorie"></s:property>
+			</s:param>
+			</s:url>
 			<tr>
 					<td><s:property value="idCategorie" /></td>
+					<td><s:property value="nomCategorie" /></td>
 					<td><s:property value="description" /></td>
 					<td/>
 					<td><s:property value="modifier" /><s:a href="%{lien1}">Edit</s:a></td>
 					<td><s:property value="supprimer" /><s:a href="%{lien2}">Delete</s:a></td>
-				<td>1</td>
-				<td>Ordinateurs</td>
-				<td>Ordinateurs</td>
-				<td>Photo</td>
-				<td><a>Supprimer</a></td>
-				<td><a>Edit</a></td>
 			</tr>
 			</s:iterator>
 		</table>

@@ -58,6 +58,18 @@ public class Categorie implements Serializable{
 	public void setListeProduit(Set<Produit> listeProduit) {
 		this.produits = listeProduit;
 	}
+
+
+
+	public Set<Produit> getProduits() {
+		return produits;
+	}
+
+
+
+	public void setProduits(Set<Produit> produits) {
+		this.produits = produits;
+	}
 	
 	
 	

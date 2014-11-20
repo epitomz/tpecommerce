@@ -33,6 +33,14 @@
 			<result>backCategorie.jsp</result>
 		</action>
 		
+		<action name="updateC" class="action.CategorieAction" method="updateC">
+			<result>backCategorie.jsp</result>
+		</action>
+		
+		<action name="deleteC" class="action.CategorieAction" method="deleteC">
+			<result>backCategorie.jsp</result>
+		</action>
+		
 		
 		
 	</package>

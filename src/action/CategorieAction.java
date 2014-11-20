@@ -14,26 +14,40 @@ public class CategorieAction extends ActionSupport {
 	private long idRole;
 	private Categorie categorie;
 	private List<Categorie> categories;
+	private boolean editMode=false;
+	private long idCat;
+	
 	
 	@Autowired
-	public IAdminCategoriesService AdminCategoriesService;
+	public IAdminCategoriesService adminCategoriesService;
 	
 	public String listeC() {
-		categories=AdminCategoriesService.listCategories();
+		categories=adminCategoriesService.listCategories();
 		return SUCCESS;
 	}
 	
 	public String saveC() {
-		AdminCategoriesService.ajouterCategorie(categorie);
-		categories=AdminCategoriesService.listCategories();
+		if(!editMode)
+			adminCategoriesService.ajouterCategorie(categorie);
+		else{
+			adminCategoriesService.modifierCategorie(categorie);
+			editMode=false;
+			categorie=new Categorie();
+		}
+		categories=adminCategoriesService.listCategories();
 		return SUCCESS;
 	}
 	
 	public String updateC() {
+		editMode=true;
+		categorie=adminCategoriesService.getCategorie(idCat);
+		categories=adminCategoriesService.listCategories();
 		return SUCCESS;
 	}
 	
 	public String deleteC() {
+		adminCategoriesService.supprimerCategrorie(idCat);
+		categories=adminCategoriesService.listCategories();
 		return SUCCESS;
 	}
 
@@ -64,15 +78,36 @@ public class CategorieAction extends ActionSupport {
 	}
 
 	public IAdminCategoriesService getAdminCategoriesService() {
-		return AdminCategoriesService;
+		return adminCategoriesService;
+	}
+	public void setAdminCategoriesService(
+			IAdminCategoriesService adminCategoriesService) {
+		this.adminCategoriesService = adminCategoriesService;
+	}
+	
+	
+	public boolean isEditMode() {
+		return editMode;
 	}
 
-	public void setAdmineCategoriesService(
-			IAdminCategoriesService adminCategoriesService) {
-		AdminCategoriesService = adminCategoriesService;
+	public void setEditMode(boolean editMode) {
+		this.editMode = editMode;
+	}
+
+	
+	
+
+	public long getIdCat() {
+		return idCat;
+	}
+
+	public void setIdCat(long idCat) {
+		this.idCat = idCat;
 	}
 
 	public void attribuerRole() {
 	
-}
+	}
+
+
 }
