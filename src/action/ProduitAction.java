@@ -42,8 +42,10 @@ public class ProduitAction extends ActionSupport {
 
 	public String saveP() {
 		if (editMode == false) {
+			
 			AdminCategoriesService.ajouterProduit(produit, idCat);
 		} else {
+			
 			AdminCategoriesService.modifierProduit(produit);
 			editMode = false;
 		}
