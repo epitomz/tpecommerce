@@ -26,7 +26,7 @@ public interface IBoutiqueDao {
 	public Produit getProduit(Long idP);
 	public void supprimerProduit(Long idP);
 	public void modifierProduit(Produit p);
-	public void ajouterUser(User u);
+	public Long ajouterUser(User u);
 	public List<User> listUsers();
 	public User getUser(Long idUser);
 	public void supprimerUser(Long idUser);

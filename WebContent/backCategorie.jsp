@@ -14,8 +14,9 @@
 		<form action="saveC" method="post">
 			<s:textfield label="Nom de la catégorie" name="categorie.nomCategorie"></s:textfield><br />
 			<s:textarea label="Description" cols="40" rows="5" name="categorie.description"></s:textarea><br />
-			<s:submit type="submit" value="Enregistrer"></s:submit><br />
 			<s:hidden name="editMode"/>
+			<s:submit type="submit" value="Enregistrer"></s:submit><br />
+			
 		</form>
 	</div>
 	

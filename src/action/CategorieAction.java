@@ -23,7 +23,7 @@ public class CategorieAction extends ActionSupport {
 	private List<User> users;
 	private long idU;
 	private List<Role> roles;
-	private long idRole;
+	private long idRole=3;
 	
 	
 	@Autowired
@@ -66,27 +66,31 @@ public class CategorieAction extends ActionSupport {
 	}
 	
 	public String saveU() {
-		if(!editMode)
-			adminCategoriesService.ajouterUser(user);
+		if(!editMode){
+			idU=adminCategoriesService.ajouterUser(user);
+			attribuerRole(idRole, idU);
+		}
 		else{
 			adminCategoriesService.modifierUser(user);
 			editMode=false;
+			attribuerRole(idRole, idU);
 			user=new User();
 		}
-		users=adminCategoriesService.listUsers();
+		
+		listeU();
 		return SUCCESS;
 	}
 	
 	public String updateU() {
 		editMode=true;
 		user=adminCategoriesService.getUser(idU);
-		users=adminCategoriesService.listUsers();
+		listeU();
 		return SUCCESS;
 	}
 	
 	public String deleteU() {
-		adminCategoriesService.supprimerCategrorie(idCat);
-		categories=adminCategoriesService.listCategories();
+		adminCategoriesService.supprimerUser(idU);
+		listeU();
 		return SUCCESS;
 	}
 	
@@ -124,6 +128,12 @@ public class CategorieAction extends ActionSupport {
 			IAdminCategoriesService adminCategoriesService) {
 		this.adminCategoriesService = adminCategoriesService;
 	}
+	
+	public void attribuerRole(Long roleID, Long userID) {
+		adminCategoriesService.attribuerRole(roleID, userID);
+
+	}
+	
 	
 	
 	public boolean isEditMode() {

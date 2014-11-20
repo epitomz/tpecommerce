@@ -139,8 +139,8 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	}
 	
 	//--
-	public void ajouterUser(User u){
-		this.getSession().save(u);
+	public Long ajouterUser(User u){
+		return (Long) getSession().save(u);
 	}
 	
 	

@@ -19,12 +19,11 @@
 			<s:select label="Role" name="idRole" list="roles" listKey="idRole" listValue="roleName"/>
 			<s:hidden name="editMode"/>
 			<s:submit type="submit" value="Enregistrer"></s:submit><br />
-			<s:hidden name="editMode"/>
 		</form>
 	</div>
 	
 	<div class="backtab">
-	<h1>Liste des catégories présents en base</h1>
+	<h1>Liste des utilisateurs présents en base</h1>
 		<table>
 			<tr>
 				<th>ID</th>

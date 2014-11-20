@@ -136,8 +136,8 @@ public class AdminCategoriesServiceImpl implements IAdminCategoriesService {
 
 	
 	@Override
-	public void ajouterUser(User u) {
-		dao.ajouterUser(u);
+	public Long ajouterUser(User u) {
+		return dao.ajouterUser(u);
 		
 	}
 	
