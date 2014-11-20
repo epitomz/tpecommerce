@@ -14,6 +14,7 @@ public interface IAdminCategoriesService extends IAdminProduitService {
 	public void modifierCategorie(Categorie c);
 	public Long ajouterUser(User u);
 	public User getUser(Long idUser);
+	public User getUser(String nom);
 	public List<User> listUsers();
 	public void supprimerUser(Long idUser);
 	public void modifierUser(User u);

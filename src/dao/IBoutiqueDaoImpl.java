@@ -157,6 +157,12 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	}
 
 	@Override
+	public User getUser(String nom) {
+	 User u = (User) this.getSession().createQuery("FROM User u WHERE u.userName = ? ").setParameter(0,nom).uniqueResult();
+	 return u;
+	}
+	
+	@Override
 	public User getUser(Long idUser) {
 		return (User) this.getSession().get(User.class, idUser);
 	}

@@ -31,6 +31,7 @@ public interface IBoutiqueDao {
 	public Long ajouterUser(User u);
 	public List<User> listUsers();
 	public User getUser(Long idUser);
+	public User getUser(String nom);
 	public void supprimerUser(Long idUser);
 	public void modifierUser(User u);
 	public void attribuerRole(Long roleID,Long userID);

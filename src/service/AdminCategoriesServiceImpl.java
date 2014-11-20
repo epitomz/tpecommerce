@@ -116,6 +116,10 @@ public class AdminCategoriesServiceImpl implements IAdminCategoriesService {
 		return dao.getUser(idUser);
 	}
 	
+	public User getUser(String nom){
+		return dao.getUser(nom);
+	}
+	
 	@Override
 	public List<User> listUsers() {
 		return dao.listUsers();
