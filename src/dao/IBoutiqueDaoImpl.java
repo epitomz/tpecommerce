@@ -90,7 +90,6 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		Categorie c=getCategorie(idCat);
 		p.setCategorie(c);
 		getSession().save(p);
-		getSession().update(p);
 		return (Long)p.getIdProduit();
 		
 	}

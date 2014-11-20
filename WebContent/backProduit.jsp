@@ -16,7 +16,8 @@
 			<s:select label="Categorie:" name="idCat" list="categories" listKey="idCategorie" listValue="nomCategorie"/><br />
 			<s:textfield label="Nom du produit" name="produit.designation"></s:textfield><br />
 			<s:textarea label="Description" cols="40" rows="5" name="produit.description"></s:textarea><br />
-			<s:textfield label="prix" name="produit.prix"></s:textfield><br />
+			<s:textfield label="Prix" name="produit.prix"></s:textfield><br />
+			<s:textfield label="Quantite" name="produit.quantite"></s:textfield><br />
 			<s:checkbox label="Selectionne" name="produit.selectionne<"></s:checkbox><br />
 			<s:file name="fileToUpload" label="Sélectionner une photo" id="fileToUpload"></s:file><br />
 			<s:submit type="submit" value="Enregistrer"></s:submit><br />
@@ -30,6 +31,9 @@
 				<th>ID</th>
 				<th>NOM CAT</th>
 				<th>Description</th>
+				<th>Prix</th>
+				<th>Quantite</th>
+				<th>Selectionne</th>
 				<th>Photo</th>
 				<th>SUPPR</th>
 				<th>EDIT</th>
@@ -58,12 +62,6 @@
 					<td>PHOTO</td>
 					<td><s:property value="modifier" /><s:a href="%{lien1}">Edit</s:a></td>
 					<td><s:property value="supprimer" /><s:a href="%{lien2}">Delete</s:a></td>
-				<td>1</td>
-				<td>Ordinateurs</td>
-				<td>Ordinateurs</td>
-				<td>Photo</td>
-				<td><a>Supprimer</a></td>
-				<td><a>Edit</a></td>
 			</tr>
 			</s:iterator>
 		</table>

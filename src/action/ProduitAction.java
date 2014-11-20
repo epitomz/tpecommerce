@@ -40,6 +40,8 @@ public class ProduitAction extends ActionSupport {
 	
 	public String saveP() {
 		AdminCategoriesService.ajouterProduit(produit,idCat);
+		produits = AdminCategoriesService.listproduits();
+		categories = AdminCategoriesService.listCategories();
 		return SUCCESS;
 	}
 	
