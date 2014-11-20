@@ -16,7 +16,8 @@
 		<form action="saveU" method="post">
 			<s:textfield label="Nom de l'utilisateur" name="user.userName"></s:textfield><br />
 			<s:password label="Mot de passe"  name="user.password"></s:password><br />
-			<s:select label="Role" name="idRole" list="roles" listKey="idRole" listValue="roleName"/>
+			<s:select label="Role" name="idRole" list="roles" listKey="idRole" listValue="roleName"/><br />
+			<s:checkbox name="user.actived"></s:checkbox>
 			<s:hidden name="editMode"/>
 			<s:submit type="submit" value="Enregistrer"></s:submit><br />
 		</form>
@@ -29,6 +30,7 @@
 				<th>ID</th>
 				<th>NOM</th>
 				<th>Role</th>
+				<th>ACTIVED</th>
 				<th>SUPPR</th> 
 				<th>EDIT</th>
 			</tr>
@@ -48,6 +50,7 @@
 					<td><s:property value="idUser" /></td>
 					<td><s:property value="userName" /></td>
 					<td><s:property value="role.roleName" /></td>
+					<td><s:property value="actived" /></td>
 					<td><s:property value="modifier" /><s:a href="%{lien1}">Edit</s:a></td>
 					<td><s:property value="supprimer" /><s:a href="%{lien2}">Delete</s:a></td>
 			</tr>
@@ -55,7 +58,7 @@
 		</table>
 	
 	</div>
-	<s:a href="index.jsp">Acceuil</s:a> <s:a href="backCategorie.jsp" action="listC">Gestionnaire des catégories</s:a>
+	<s:a href="index.jsp">Accueil</s:a> <s:a href="backCategorie.jsp" action="listC">Gestionnaire des catégories</s:a>
  
 </body>
 
