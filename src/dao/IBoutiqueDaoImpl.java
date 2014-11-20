@@ -245,12 +245,13 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 	@Override
 	public Long saveLigneCommande(LigneCommande l) {
 		// TODO Auto-generated method stub
-		return null;
+		return (Long) getSession().save(l);
 	}
 
 	@Override
 	public void deleteLigneCommande(Long idLigneCommande) {
 		// TODO Auto-generated method stub
+		this.getSession().delete(this.getClient(idLigneCommande));
 		
 	}
 
