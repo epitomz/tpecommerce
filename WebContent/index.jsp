@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<!-- <jsp:include page="WEB-INF/inc/loginCheck.jsp" /> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -21,8 +22,10 @@
 		<h2>Panier</h2>
 		<p>0 article ajouté</p>
 		<s:url namespace="/" action="login" var="lien1"/>
-	<s:if test="%{#logined == 'True'}">Logout</s:if>
-	<s:a href="%{lien1}">Se connecter</s:a>
+		<s:url namespace="/" action="logout" var="lien2"/>
+	<s:if test="#session.logined == 'true'"><s:a href="%{lien2}">Se déconnecter</s:a></s:if>
+	<s:else><s:a href="%{lien1}">Se connecter</s:a></s:else>
+	
 	</div>
 </div>
 

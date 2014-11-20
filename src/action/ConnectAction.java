@@ -4,6 +4,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import metier.Role;
 import metier.User;
 
 import org.apache.struts2.ServletActionContext;
@@ -20,6 +21,7 @@ public class ConnectAction extends ActionSupport {
 	public IAdminCategoriesService AdminCategoriesService;
 	
 	private User user;
+	private Role role;
 
 	public String login() {
 		return SUCCESS;
@@ -28,7 +30,8 @@ public class ConnectAction extends ActionSupport {
 	public String connect() {
 		AdminCategoriesService.Authentifier(user);
 		Map session = ActionContext.getContext().getSession();
-		session.put("logined","true");		
+		session.put("logined","true");
+		session.put("role", user.getRole());	
 		return SUCCESS;
 	}
 
