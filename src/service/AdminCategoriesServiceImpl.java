@@ -31,6 +31,7 @@ public class AdminCategoriesServiceImpl implements IAdminCategoriesService {
 	@Override
 	public Long ajouterProduit(Produit p, Long idCat) {
 		return dao.ajouterProduit(p, idCat);
+		
 	}
 
 	@Override
