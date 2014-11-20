@@ -115,7 +115,7 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 
 	public List<Produit> produitsParCategorie(Long idCat){
 		List<Produit> list= new ArrayList<Produit>();
-		list=getSession().createQuery("FROM Produit p where p.idCategorie=?").setParameter(0, idCat).list();
+		list=getSession().createQuery("FROM Produit p where p.categorie.idCategorie=?").setParameter(0, idCat).list();
 		return list;
 	}
 	

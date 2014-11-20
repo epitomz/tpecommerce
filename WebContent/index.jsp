@@ -46,7 +46,12 @@
 <div class="sidebar">
 	<ul>
 		<s:iterator value="categories">
-			<li><s:property value="nomCategorie" /></li>
+		<s:url namespace="/" action="listeProdparCat" var="lien4">
+			<s:param name="idCat">
+				<s:property value = "idCategorie"></s:property>
+			</s:param>
+			</s:url>
+			<li><s:a href="%{lien4}"><s:property value="nomCategorie" /></s:a></li>
 		</s:iterator>
 	</ul>
 	
