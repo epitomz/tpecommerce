@@ -20,43 +20,50 @@ public class ProduitAction extends ActionSupport {
 	private long idCat;
 	private List<Categorie> categories;
 	private long ref;
-	
+	private boolean editMode = false;
+
 	@Autowired
 	public IAdminCategoriesService AdminCategoriesService;
-	
-	
+
 	public void setIdCat(long idCat) {
 		this.idCat = idCat;
 	}
 
 	public String listeP() {
-		produits=AdminCategoriesService.listproduits();
+		produits = AdminCategoriesService.listproduits();
 		return SUCCESS;
 	}
-	
-	public String listeCetP(){
-		produits=AdminCategoriesService.listproduits();
-		categories=AdminCategoriesService.listCategories();
-		return SUCCESS;
-	}
-	
-	public String saveP() {
-		AdminCategoriesService.ajouterProduit(produit,idCat);
+
+	public String listeCetP() {
 		produits = AdminCategoriesService.listproduits();
 		categories = AdminCategoriesService.listCategories();
+		return SUCCESS;
+	}
+
+	public String saveP() {
+		if (editMode == false) {
+			AdminCategoriesService.ajouterProduit(produit, idCat);
+		} else {
+			AdminCategoriesService.modifierProduit(produit);
+			editMode = false;
+		}
+		this.listeCetP();
+
 		produit = new Produit();
 		return SUCCESS;
 	}
-	
+
 	public String updateP() {
-		System.out.println(ref);
+		editMode = true;
 		produit = AdminCategoriesService.getProduit(ref);
-		produits = AdminCategoriesService.listproduits();
-		categories = AdminCategoriesService.listCategories();
+		this.listeCetP();
+
 		return SUCCESS;
 	}
-	
+
 	public String deleteP() {
+		AdminCategoriesService.supprimerProduit(ref);
+		this.listeCetP();
 		return SUCCESS;
 	}
 
@@ -117,7 +124,12 @@ public class ProduitAction extends ActionSupport {
 		this.ref = ref;
 	}
 
-	
-	
-	
+	public boolean isEditMode() {
+		return editMode;
+	}
+
+	public void setEditMode(boolean editMode) {
+		this.editMode = editMode;
+	}
+
 }
