@@ -30,6 +30,7 @@
 			<result>backProduit.jsp</result>
 		</action>
 		
+		
 		<action name="saveC" class="action.CategorieAction" method="saveC">
 			<result>backCategorie.jsp</result>
 		</action>
@@ -45,6 +46,23 @@
 		<action name="deleteC" class="action.CategorieAction" method="deleteC">
 			<result>backCategorie.jsp</result>
 		</action>
+		
+		<action name="saveU" class="action.CategorieAction" method="saveU">
+			<result>backUsers.jsp</result>
+		</action>
+		
+		<action name="listeU" class="action.CategorieAction" method="listeU">
+			<result>backUsers.jsp</result>
+		</action>
+		
+		<action name="updateU" class="action.CategorieAction" method="updateU">
+			<result>backUsers.jsp</result>
+		</action>
+		
+		<action name="deleteU" class="action.CategorieAction" method="deleteU">
+			<result>backUsers.jsp</result>
+		</action>
+		
 		
 		<action name="login" class="action.ConnectAction" method="login">
 			<result>login.jsp</result>
