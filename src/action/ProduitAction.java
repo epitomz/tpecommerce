@@ -44,6 +44,7 @@ public class ProduitAction extends ActionSupport {
 		AdminCategoriesService.ajouterProduit(produit,idCat);
 		produits = AdminCategoriesService.listproduits();
 		categories = AdminCategoriesService.listCategories();
+		produit = new Produit();
 		return SUCCESS;
 	}
 	
