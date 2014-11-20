@@ -17,7 +17,7 @@
 			<s:textfield label="Nom de l'utilisateur" name="user.userName"></s:textfield><br />
 			<s:password label="Mot de passe"  name="user.password"></s:password><br />
 			<s:select label="Role" name="idRole" list="roles" listKey="idRole" listValue="roleName"/><br />
-			<s:checkbox name="user.actived"></s:checkbox>
+			<s:checkbox label ="Activé" name="user.actived"></s:checkbox>
 			<s:hidden name="editMode"/>
 			<s:submit type="submit" value="Enregistrer"></s:submit><br />
 		</form>

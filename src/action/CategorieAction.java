@@ -73,10 +73,10 @@ public class CategorieAction extends ActionSupport {
 		else{
 			adminCategoriesService.modifierUser(user);
 			editMode=false;
-			attribuerRole(idRole, idU);
+			attribuerRole(idRole, user.getIdUser());
 			user=new User();
 		}
-		
+		idRole=3;
 		listeU();
 		return SUCCESS;
 	}
