@@ -115,7 +115,7 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 
 	public List<Produit> produitsParCategorie(Long idCat){
 		List<Produit> list= new ArrayList<Produit>();
-		list=getSession().createQuery("FROM Produit p where p.idCategorie=?1").setParameter(1, idCat).list();
+		list=getSession().createQuery("FROM Produit p where p.idCategorie=?").setParameter(0, idCat).list();
 		return list;
 	}
 	
@@ -278,7 +278,9 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 
 	//ko
 	public Set<LigneCommande> listerLigneCommande(Long idClient){
-		return null;
+		Set<LigneCommande> list= new HashSet<LigneCommande>();
+		list=(Set<LigneCommande>) getSession().createQuery("FROM LigneCommande l WHERE idClient=?").setParameter(0, idClient).list();
+		return list;
 	}
 	
 
