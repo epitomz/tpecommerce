@@ -68,6 +68,10 @@
 			<result>login.jsp</result>
 		</action>
 		
+		<action name="logout" class="action.ConnectAction" method="logout">
+			<result>index.jsp</result>
+		</action>
+		
 		<action name="connect" class="action.ConnectAction" method="connect">
 			<result>index.jsp</result>
 		</action>

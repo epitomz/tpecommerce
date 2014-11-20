@@ -31,7 +31,16 @@ public class ConnectAction extends ActionSupport {
 		AdminCategoriesService.Authentifier(user);
 		Map session = ActionContext.getContext().getSession();
 		session.put("logined","true");
+		session.put("username", user.getUserName());
 		session.put("role", user.getRole());	
+		return SUCCESS;
+	}
+	
+	public String logout() {
+		AdminCategoriesService.Authentifier(user);
+		Map session = ActionContext.getContext().getSession();
+		session.remove("logined");
+		session.remove("role");	
 		return SUCCESS;
 	}
 

@@ -23,8 +23,14 @@
 		<p>0 article ajouté</p>
 		<s:url namespace="/" action="login" var="lien1"/>
 		<s:url namespace="/" action="logout" var="lien2"/>
-	<s:if test="#session.logined == 'true'"><s:a href="%{lien2}">Se déconnecter</s:a></s:if>
-	<s:else><s:a href="%{lien1}">Se connecter</s:a></s:else>
+	<s:if test="#session.logined == 'true'">
+		<p>Bonjour <s:property value="#session.username" /></p>
+		<s:a href="%{lien2}">Se déconnecter</s:a>
+	</s:if>
+	<s:else>
+		<s:a href="signup.jsp">S'inscrire</s:a>
+		<s:a href="%{lien1}">Se connecter</s:a>
+	</s:else>
 	
 	</div>
 </div>
