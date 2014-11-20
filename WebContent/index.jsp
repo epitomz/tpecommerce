@@ -45,72 +45,27 @@
 
 <div class="sidebar">
 	<ul>
-		<li><a href="">Ordinateurs</a></li>
-		<li><a href="">Smartphones</a></li>
-		<li><a href="">Tablettes</a></li>
-</ul>
+		<s:iterator value="categories">
+			<li><s:property value="nomCategorie" /></li>
+		</s:iterator>
+	</ul>
+	
 </div>
 
 <div class="contenu">
-	<div class="objet">
-		<h2>Computer</h2>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-	</div>
-	<div class="objet">
-		<h2>Computer</h2>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-	</div>
-	<div class="objet">
-		<h2>Computer</h2>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-	</div>
-	<div class="objet">
-		<h2>Computer</h2>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-	</div>
-	<div class="objet">
-		<h2>Computer</h2>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-	</div>
-	<div class="objet">
-		<h2>Computer</h2>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-	</div>
-	<div class="objet">
-	<h2>Computer</h2>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-		<h3>Prix: 1000€</h3>
-	</div>
+	<s:iterator value="produits">
+		<div class="objet">
+			<td><s:property value="idProduit" /></td><br />
+			<td><s:property value="designation" /></td><br />
+			<td><s:property value="description" /></td><br />
+			<td><s:property value="prix" /></td><br />
+			<td><s:property value="quantite" /></td><br />
+			<td><s:textfield label="Quantite" name="quantite"></s:textfield></td><br />
+			<td><s:a href="panier.jsp" action="ajoutPanier">Ajouter au panier</s:a>
+		</div>
+	</s:iterator>
 	
 	
-
 </div>
 
 </body>
