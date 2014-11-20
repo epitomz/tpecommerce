@@ -186,6 +186,8 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		return list;
 	}
 	
+	//Commande-----------------------
+	
 	public Commande enregistrerCommande(Panier p,Client c){
 		Commande commande=new Commande();
 		commande.setClient(c);
@@ -195,6 +197,8 @@ public class IBoutiqueDaoImpl implements IBoutiqueDao{
 		return commande;
 		
 	}
+	
+
 	
 	//ko
 	public String listerLigneCommande(){
