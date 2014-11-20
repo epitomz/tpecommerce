@@ -11,11 +11,12 @@
 <body class="bodclass">
 	<h1>Ajouter une categorie en base</h1>
 	
-	<div class="backform">
+	<div class="backform formCat">
 		<form action="saveC" method="post">
 			<s:textfield label="Nom de la catégorie" name="categorie.nomCategorie"></s:textfield><br />
 			<s:textarea label="Description" cols="40" rows="5" name="categorie.description"></s:textarea><br />
 			<s:hidden name="editMode"/>
+			<s:hidden name="categorie.idCategorie"/>
 			<s:submit type="submit" value="Enregistrer"></s:submit><br />
 			
 		</form>
@@ -54,8 +55,10 @@
 			</tr>
 			</s:iterator>
 		</table>
-	
+	<div class="menuRetour">
+		<s:a href="index.jsp">Accueil</s:a> <s:a href="backUsers.jsp" action="listU">Gestionnaire des utilisateurs</s:a>
 	</div>
-	<s:a href="index.jsp">Accueil</s:a> <s:a href="backUsers.jsp" action="listU">Gestionnaire des utilisateurs</s:a>
+	</div>
+	
 </body>
 </html>

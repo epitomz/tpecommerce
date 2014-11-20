@@ -1,3 +1,4 @@
+/*Général*/
 body {
 	font-family: helvetica;
 	background: #f2f2f2;
@@ -115,6 +116,7 @@ h1 {
 	background: white;
 }
 
+/*Formulaire*/
 .backform #produit_prix {
 	margin-left: 82px;
 }
@@ -153,6 +155,19 @@ h1 {
 .backform input[type="submit"]:hover {
 	cursor: pointer;
 	background-color: #f0f0f0;
+}
+
+.formCat {
+	height: 150px;
+}
+
+.formCat input[type="submit"] {
+	margin-top: 20px;
+}
+
+.menuRetour {
+	text-align: center;
+	margin-top: 50px;
 }
 
 /* Connexion */

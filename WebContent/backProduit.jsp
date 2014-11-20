@@ -66,7 +66,9 @@
 			</tr>
 			</s:iterator>
 		</table>
-	
+	<div class="menuRetour">
+		<s:a href="index.jsp">Accueil</s:a>
+	</div>
 	</div>
 
 </body>
